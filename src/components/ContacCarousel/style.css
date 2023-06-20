@@ -1,35 +1,34 @@
-
-.contact-carousel-button_bottom{
-    width: 22px !important;
-    height: 22px !important;
-    border-radius: 50%;
-    background-color: #CACACA !important;
+.contact-carousel-button_bottom {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50%;
+  background-color: #cacaca !important;
 }
-.contact-carousel-button_bottom.active{
-    background-color:#FFF500 !important ;
+.contact-carousel-button_bottom.active {
+  background-color: #fff500 !important ;
 }
-.contact-carousel-control-button{
-    background-color: #01AEE7;
-    width: 60px;
-    height: 57px;
-    border-radius: 50%;
-    margin: auto;
-    opacity: 1 !important;
+.contact-carousel-control-button {
+  background-color: #01aee7;
+  width: 60px;
+  height: 57px;
+  border-radius: 50%;
+  margin: auto;
+  opacity: 1 !important;
 }
-.contact-carousel-control-button-left{
-    margin-left: -100px;
+.contact-carousel-control-button-left {
+  margin-left: -100px;
 }
-.contact-carousel-control-button-right{
-    margin-right: -100px;
+.contact-carousel-control-button-right {
+  margin-right: -100px;
 }
 
 .contact-carousel-control-button-left-icon {
-    width: 15.3px;
-    height: 27px;
-    background-image: url("../../assets/imgs/left-button.png") !important;
+  width: 15.3px;
+  height: 27px;
+  background-image: url("../../assets/imgs/left-button.png") !important;
 }
 .contact-carousel-control-button-right-icon {
-    width: 15.3px;
-    height: 27px;
-    background-image: url("../../assets/imgs/right-button.png") !important;
+  width: 15.3px;
+  height: 27px;
+  background-image: url("../../assets/imgs/right-button.png") !important;
 }

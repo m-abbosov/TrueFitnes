@@ -1,12 +1,12 @@
 import { Wrapper } from "./style";
 import "./style.css";
-import Car1 from "../../assets/imgs/carousel/Car1.png";
-import Car2 from "../../assets/imgs/carousel/Car2.png";
-import Car3 from "../../assets/imgs/carousel/Car3.png";
-import Car4 from "../../assets/imgs/carousel/Car4.png";
-import Car5 from "../../assets/imgs/carousel/Car5.png";
-import Car6 from "../../assets/imgs/carousel/Car6.png";
-import Car7 from "../../assets/imgs/carousel/Car7.png";
+import Car1 from "../../assets/imgs/carousel/Car1.JPG";
+import Car2 from "../../assets/imgs/carousel/Car2.JPG";
+import Car3 from "../../assets/imgs/carousel/Car3.JPG";
+import Car4 from "../../assets/imgs/carousel/Car4.JPG";
+import Car5 from "../../assets/imgs/carousel/Car5.JPG";
+import Car6 from "../../assets/imgs/carousel/Car6.JPG";
+import Car7 from "../../assets/imgs/carousel/Car7.JPG";
 
 function MyCarousel() {
   const data = [Car1, Car2, Car3, Car4, Car5, Car6, Car7];
@@ -40,7 +40,7 @@ function MyCarousel() {
                 className={`carousel-item ${i === 0 ? "active" : ""}`}
                 key={Math.random()}
               >
-                <img src={item} className="d-block w-100" alt="..." />
+                <img src={item} className="d-block w-100 " alt="..." />
               </div>
             );
           })}

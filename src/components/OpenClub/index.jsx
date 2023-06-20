@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Button,
   ClubText,
@@ -13,8 +14,61 @@ import {
   Wrapper,
 } from "./style";
 import img from "../../assets/imgs/club.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-international-phone/style.css";
+import "react-toastify/dist/ReactToastify.css";
 
+import { PhoneInput } from "react-international-phone";
 function OpenClub() {
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    if (
+      e.target[3].value
+        .split(" ")
+        .filter((_, i) => i !== 0)
+        .join("")
+        .trim() === ""
+    ) {
+      toast.error("Где-то ошибка");
+      return;
+    }
+
+    const id = toast.loading("Загрузка...");
+    formData.append("name", e.target[0].value);
+    formData.append("email", e.target[1].value);
+    formData.append(
+      "phone",
+      e.target[3].value
+        .split(" ")
+        .filter((_, i) => i !== 0)
+        .join("")
+    );
+
+    fetch(" https://sheetdb.io/api/v1/fl9x6zmo27z3l", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((html) => {
+        toast.update(id, {
+          render: "Добавлено успешно!",
+          type: "success",
+          isLoading: false,
+          autoClose: 2000,
+        });
+      })
+      .catch((err) =>
+        toast.update(id, {
+          render: "Где-то ошибка",
+          type: "error",
+          isLoading: false,
+          autoClose: 2000,
+        })
+      );
+  };
   return (
     <Wrapper>
       <TitleContainer>
@@ -23,14 +77,21 @@ function OpenClub() {
       </TitleContainer>
       <Img src={img} />
       <FormContainer>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormTitle size="30px">Отправить заявку</FormTitle>
           <FormTitle>Ваше имя</FormTitle>
           <Input placeholder="имя" />
           <FormTitle>Е-mail:</FormTitle>
           <Input placeholder="Е-mail:" />
           <FormTitle>Номер телефона</FormTitle>
-          <Input placeholder=" +7(999)-999-99-99" />
+          <PhoneInput
+            defaultCountry="uz"
+            value={phone}
+            onChange={(phone) => setPhone(phone)}
+            placeholder="+998 (99)-999-99-99"
+            name="data[phone]"
+            hideDropdown={true}
+          />
           <FormTitle>Город</FormTitle>
           <Input placeholder="Город" />
           <FormTitle>Хотите открыть:</FormTitle>
@@ -97,9 +158,11 @@ function OpenClub() {
           <Button>ADD FILES</Button>
           <FormTitle>Комментарий</FormTitle>
           <Input height={"103px"} />
-          <Button>Oтпрвить</Button>
+          <Button type="submit">Oтпрвить</Button>
         </Form>
       </FormContainer>
+
+      <ToastContainer />
     </Wrapper>
   );
 }

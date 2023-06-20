@@ -63,7 +63,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.home-carousel-wrapper-div-img img {
   width: 507px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.home-carousel-wrapper-div-img img {
+
 }

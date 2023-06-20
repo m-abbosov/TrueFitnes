@@ -18,7 +18,6 @@ import BestFeatures from "../BestFeatures";
 import img from "../../assets/imgs/aboutTrue.png";
 import OtherProject from "../OtherProject";
 import { useTranslation } from "react-i18next";
-// import MyCarousel from "../ContacCarousel";
 
 function Home() {
   const { t } = useTranslation();

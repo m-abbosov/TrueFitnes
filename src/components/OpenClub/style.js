@@ -5,6 +5,18 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 77px;
+
+  .react-international-phone-input-container {
+    height: ${({ height }) => height || "46px"};
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    * {
+      font-size: 18px;
+      line-height: 22px;
+      background: transparent;
+    }
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -84,21 +96,19 @@ export const FormText = styled.span`
   color: #000000;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   width: 405px;
   margin: auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* justify-content: space-between; */
 `;
 export const Input = styled.input`
   width: 395px;
   height: ${({ height }) => height || "46px"};
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   border: none;
   border-bottom: 1px solid black;
   background: none;
@@ -124,8 +134,6 @@ export const Button = styled.button`
   width: 161px;
   height: 40px;
   background: #01aee7;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
