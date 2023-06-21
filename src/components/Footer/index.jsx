@@ -30,27 +30,27 @@ function Footer() {
     },
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/velotrenazhery",
       title: "True Stretch",
     },
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/jellipticheskie_trenazhery",
       title: "Сайклинг",
     },
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/trenazhery_dlja_funkcional_noj_trenirovki",
       title: "Групповые тренировки",
     },
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/nagruzhaemye_diskami",
       title: "Силовые тренажеры",
     },
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/svobodnye_vesa_i_hranenie",
       title: "Консоли",
     },
   ];
