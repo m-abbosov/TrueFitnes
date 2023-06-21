@@ -13,7 +13,6 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .use(HttpApi)
-  // .init(i18nextOptions)
   .init(
     {
       supportedLngs: [ "ru", "uz"],
