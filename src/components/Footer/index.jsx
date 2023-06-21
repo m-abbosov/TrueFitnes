@@ -61,10 +61,7 @@ function Footer() {
         <p className="titleText">КАТАЛОГ ТОВАРОВ</p>
         <Texts>
           {catalog.map((item) => (
-            <P
-              onClick={() => window.open(item.link, "__blank")}
-              key={item.id}
-            >
+            <P onClick={() => window.open(item.link, "__blank")} key={item.id}>
               {item.title}
             </P>
           ))}
@@ -113,10 +110,10 @@ function Footer() {
           <a href="https://m.facebook.com/prowellness.uz/">
             <Facebook />
           </a>
-          <a href="https://instagram.com/prowellness.uz/">
+          <a href="https://www.instagram.com/truefitness.uz/?igshid=Y2IzZGU1MTFhOQ%3D%3D">
             <Instogram />
           </a>
-          <a href="https://www.youtube.com/">
+          <a href="https://www.youtube.com/@truefitnesstech">
             <Youtube />
           </a>
         </Icons>

@@ -6,6 +6,29 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+
+  .year {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+
+    span {
+      border-radius: 3px;
+      width: 44px;
+      height: 3px;
+    }
+
+    &.active {
+      span {
+        background: #fff500;
+      }
+      b {
+        color: #01aee7;
+      }
+    }
+  }
 `;
 
 export const About = styled.div`
@@ -39,7 +62,6 @@ export const Text = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  background: #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,11 +124,6 @@ export const ImgDiv = styled.div`
   gap: 125px;
   padding: 40px 0;
 `;
-export const Img = styled.img`
-  width: 610px;
-  height: 400px;
-  object-fit: cover;
-`;
 export const TrueSports = styled.div`
   display: flex;
   flex-direction: column;
@@ -145,11 +162,6 @@ export const InnovationsCard = styled.div`
   border-bottom: 3px solid #ffd233;
 `;
 
-export const InnovationsImg = styled.img`
-  width: 400px;
-  height: 368px;
-  object-fit: cover;
-`;
 export const CardText = styled.p`
   font-family: "Inter";
   font-style: normal;
