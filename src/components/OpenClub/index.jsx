@@ -18,7 +18,6 @@ import "react-international-phone/style.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import { PhoneInput } from "react-international-phone";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 function OpenClub() {
   const [phone, setPhone] = useState("");
   const [open, setOpen] = useState("");
