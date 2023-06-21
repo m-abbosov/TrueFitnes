@@ -8,6 +8,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import i18nextOptions from "i18next-browser-languagedetector";
+import Loading from "./components/Loading";
 
 i18n
   .use(initReactI18next)
@@ -15,7 +16,7 @@ i18n
   .use(HttpApi)
   .init(
     {
-      supportedLngs: [ "ru", "uz"],
+      supportedLngs: ["ru", "uz"],
       fallbackLng: "ru",
       detection: {
         order: ["htmlTag", "cookie", "localStorage", "subdomain", "path"],
@@ -36,7 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<>Loading...</>}>
+      <Suspense fallback={<Loading />}>
         <Root />
       </Suspense>
     </BrowserRouter>
