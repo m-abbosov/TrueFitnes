@@ -1,12 +1,17 @@
 import { useTranslation } from "react-i18next";
-import { Button, Container, H1, IMG, Span, Text, Wrapper } from "./style";
+import { Button, Container, H1, Span, Text, Wrapper } from "./style";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function AboutTrue({ img, button }) {
   const { t } = useTranslation();
 
   return (
     <Wrapper>
-      <IMG src={img} />
+      <LazyLoadImage
+        alt="main"
+        effect="blur"
+        src={img}
+      />
       <Container>
         <H1>{t("home.aboutTrue.title")}</H1>
         <Span></Span>

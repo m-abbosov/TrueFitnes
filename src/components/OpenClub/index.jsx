@@ -6,7 +6,6 @@ import {
   FormContainer,
   FormText,
   FormTitle,
-  Img,
   Input,
   Label,
   Title,
@@ -19,34 +18,42 @@ import "react-international-phone/style.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import { PhoneInput } from "react-international-phone";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function OpenClub() {
   const [phone, setPhone] = useState("");
+  const [open, setOpen] = useState("");
+  const [time, setTime] = useState("");
+  const [interest, setInterest] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
+
     if (
-      e.target[3].value
+      phone
         .split(" ")
         .filter((_, i) => i !== 0)
-        .join("")
-        .trim() === ""
+        .join("").length < 9
     ) {
-      toast.error("Где-то ошибка");
+      toast.error("Номер неправильный!");
       return;
     }
-
     const id = toast.loading("Загрузка...");
+
     formData.append("name", e.target[0].value);
     formData.append("email", e.target[1].value);
     formData.append(
       "phone",
-      e.target[3].value
+      phone
         .split(" ")
         .filter((_, i) => i !== 0)
         .join("")
     );
-
+    formData.append("city", e.target[4].value);
+    formData.append("want", open);
+    formData.append("term", time);
+    formData.append("interested", interest);
+    formData.append("comments", e.target[20].value);
     fetch(" https://sheetdb.io/api/v1/fl9x6zmo27z3l", {
       method: "POST",
       body: formData,
@@ -59,6 +66,8 @@ function OpenClub() {
           isLoading: false,
           autoClose: 2000,
         });
+        e.target.reset();
+        setPhone("");
       })
       .catch((err) =>
         toast.update(id, {
@@ -69,13 +78,28 @@ function OpenClub() {
         })
       );
   };
+
+  const handleOpen = (e) => {
+    setOpen(e.target.value);
+  };
+  const handleTime = (e) => {
+    setTime(e.target.value);
+  };
+
+  const handleInterest = (e) => {
+    if (interest.trim() === "") {
+      setInterest(e.target.value);
+    } else {
+      setInterest((prev) => setInterest(`${prev}, ${e.target.value}`));
+    }
+  };
   return (
     <Wrapper>
       <TitleContainer>
         <ClubText>КЛУБ TRUE</ClubText>
         <Title>Открыть клуб вместе с TRUE</Title>
       </TitleContainer>
-      <Img src={img} />
+      <LazyLoadImage className="d-block m-auto" width="1350px" src={img} />
       <FormContainer>
         <Form onSubmit={handleSubmit}>
           <FormTitle size="30px">Отправить заявку</FormTitle>
@@ -93,7 +117,7 @@ function OpenClub() {
             hideDropdown={true}
           />
           <FormTitle>Город</FormTitle>
-          <Input placeholder="Город" />
+          <Input placeholder="Город" type="text" required />
           <FormTitle>Хотите открыть:</FormTitle>
           <Label>
             <input
@@ -101,6 +125,7 @@ function OpenClub() {
               name="open"
               id="fitness-club"
               value="Фитнес клуб"
+              onChange={handleOpen}
             />
             <FormText htmlFor="fitness-club">Фитнес клуб</FormText>
           </Label>
@@ -110,6 +135,7 @@ function OpenClub() {
               name="open"
               id="fitness-studio"
               value="Фитнес студия"
+              onChange={handleOpen}
             />
             <FormText htmlFor="fitness-studio">Фитнес студия</FormText>
           </Label>
@@ -119,6 +145,7 @@ function OpenClub() {
               name="open"
               id="corpo-sport"
               value="Корпоративный спортзал"
+              onChange={handleOpen}
             />
             <FormText htmlFor="corpo-sport">Корпоративный спортзал</FormText>
           </Label>
@@ -128,31 +155,61 @@ function OpenClub() {
               name="open"
               id="stanatory"
               value="Тренажерный зал в отеле, санатории"
+              onChange={handleOpen}
             />
             <FormText htmlFor="stanatory">
               Тренажерный зал в отеле, санатории
             </FormText>
           </Label>
           <Label>
-            <input id="home-sport" type="radio" name="open" />
+            <input
+              id="home-sport"
+              onChange={handleOpen}
+              type="radio"
+              name="open"
+              value="Домашний спортзал"
+            />
             <FormText htmlFor="home-sport">Домашний спортзал</FormText>
           </Label>
-
           <FormTitle>Планируемый срок запуска проекта:</FormTitle>
           <Label>
-            <input type="radio" name="time" id="fast" value="Срочно" />
+            <input
+              type="radio"
+              name="time"
+              id="fast"
+              value="Срочно"
+              onChange={handleTime}
+            />
             <FormText htmlFor="fast">Срочно</FormText>
           </Label>
           <Label>
-            <input type="radio" name="time" id="month-1" value="до 1 месяца" />
+            <input
+              type="radio"
+              name="time"
+              id="month-1"
+              value="до 1 месяца"
+              onChange={handleTime}
+            />
             <FormText htmlFor="month-1">до 1 месяца</FormText>
           </Label>
           <Label>
-            <input type="radio" name="time" id="month-3" value="до 3 месяцев" />
+            <input
+              type="radio"
+              name="time"
+              id="month-3"
+              value="до 3 месяцев"
+              onChange={handleTime}
+            />
             <FormText htmlFor="month-3">до 3 месяцев</FormText>
           </Label>
           <Label>
-            <input type="radio" name="time" id="month-6" value="до 6 месяцев" />
+            <input
+              type="radio"
+              name="time"
+              id="month-6"
+              value="до 6 месяцев"
+              onChange={handleTime}
+            />
             <FormText htmlFor="month-6">до 6 месяцев</FormText>
           </Label>
           <Label>
@@ -161,6 +218,7 @@ function OpenClub() {
               name="time"
               id="month-12"
               value="до 12 месяцев"
+              onChange={handleTime}
             />
             <FormText htmlFor="month-12">до 12 месяцев</FormText>
           </Label>
@@ -170,17 +228,27 @@ function OpenClub() {
               name="time"
               id="month-12p"
               value="более 12 месяцев"
+              onChange={handleTime}
             />
             <FormText htmlFor="month-12p">более 12 месяцев</FormText>
           </Label>
-
           <FormTitle>Какие услуги Вас интересуют:</FormTitle>
           <Label>
-            <input type="checkbox" id="consult" value="Консультация" />
+            <input
+              type="checkbox"
+              id="consult"
+              value="Консультация"
+              onChange={handleInterest}
+            />
             <FormText htmlFor="consult">Консультация</FormText>
           </Label>
           <Label>
-            <input type="checkbox" id="selection" value="Подбор оборудования" />
+            <input
+              type="checkbox"
+              id="selection"
+              value="Подбор оборудования"
+              onChange={handleInterest}
+            />
             <FormText htmlFor="selection">Подбор оборудования</FormText>
           </Label>
           <Label>
@@ -188,13 +256,19 @@ function OpenClub() {
               type="checkbox"
               id="simulators"
               value="Расстановка тренажеров на плане"
+              onChange={handleInterest}
             />
             <FormText htmlFor="simulators">
               Расстановка тренажеров на плане
             </FormText>
           </Label>
           <Label>
-            <input type="checkbox" id="lizing" value="Лизинг" />
+            <input
+              type="checkbox"
+              id="lizing"
+              value="Лизинг"
+              onChange={handleInterest}
+            />
             <FormText htmlFor="lizing">Лизинг</FormText>
           </Label>
           <FormTitle>Комментарий</FormTitle>
@@ -202,7 +276,6 @@ function OpenClub() {
           <Button type="submit">Oтпрвить</Button>
         </Form>
       </FormContainer>
-
       <ToastContainer />
     </Wrapper>
   );
