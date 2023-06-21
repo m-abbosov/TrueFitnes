@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 1440px;
-  display: flex;
-  flex-direction: column;
-  gap: 77px;
-
+  width: 100vw;
   .react-international-phone-input-container {
     height: ${({ height }) => height || "46px"};
     border: none;
     border-bottom: 1px solid black;
-    background: none;
+    background: transparent;
     * {
       font-size: 18px;
       line-height: 22px;
       background: transparent;
+      border: none;
     }
   }
 `;
@@ -31,15 +28,17 @@ export const TitleContainer = styled.div`
 `;
 
 export const Img = styled.img`
+  display: block;
   width: 1350px;
   height: 900px;
   margin: auto;
+  padding: 77px 0;
 `;
 
 export const FormContainer = styled.div`
-  width: 1440px;
+  width: 100%;
   height: 1547px;
-  background: #d9d9d9;
+  background: #eee;
   padding: 65px 0;
 `;
 export const Title = styled.div`
@@ -86,14 +85,13 @@ export const FormTitle = styled.div`
   text-transform: uppercase;
   color: #000000;
 `;
-export const FormText = styled.span`
-  font-family: "Inter";
+export const FormText = styled.label`
   font-style: normal;
-  font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
   color: #000000;
+  cursor: pointer;
 `;
 
 export const Form = styled.form`
@@ -121,11 +119,17 @@ export const Input = styled.input`
   }
 `;
 
-export const Label = styled.label`
+export const Label = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
+
+  input {
+    accent-color: black;
+    cursor: pointer;
+  }
 `;
 
 export const Button = styled.button`

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 1440px;
-  height: 704px;
-  background: #fffdfd;
+  width: 100%;
   padding: 38px 100px;
   display: flex;
-  gap: 42px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 43px;
 
   .react-international-phone-input-container {
-    width: 609px;
+    width: 100%;
     height: 47px;
     border: none;
 
@@ -30,20 +30,19 @@ export const Wrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 588px;
-  height: 430px;
+  width: 50%;
   margin-top: 90px;
   object-fit: cover;
 `;
 
 export const Form = styled.form`
-  width: 609px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 31px;
 `;
 export const Input = styled.input`
-  width: 609px;
+  width: 100%;
   height: 47px;
   border: none;
   font-weight: 700;

@@ -25,8 +25,8 @@ function Carousel() {
   return (
     <Wrapper>
       <div
-        id="carouselExampleCaptions"
-        className="carousel slide "
+        id="carouselExampleAutoplaying"
+        className="carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
@@ -35,7 +35,7 @@ function Carousel() {
               <button
                 type="button"
                 key={Math.random()}
-                data-bs-target="#carouselExampleCaptions"
+                data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide-to={i}
                 className={`contact-carousel-button_bottom ${
                   i === 0 ? "active" : ""
@@ -52,6 +52,7 @@ function Carousel() {
               <div
                 key={Math.random()}
                 className={`carousel-item ${i === 0 ? "active" : ""}`}
+                data-bs-interval="2000"
               >
                 <div className="home-carousel-wrapper-div">
                   <div className="home-carousel-wrapper-div-texts">
@@ -90,7 +91,6 @@ function Carousel() {
             );
           })}
         </div>
-  
       </div>
     </Wrapper>
   );

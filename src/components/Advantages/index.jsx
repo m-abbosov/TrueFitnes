@@ -1,13 +1,5 @@
 import { Button, ClubText, P, Title, TitleContainer } from "../OpenClub/style";
-import {
-  Card,
-  Cards,
-  H1,
-  Img,
-  Text,
-  Wrapper,
-  Titlee,
-} from "./style";
+import { Card, Cards, H1, Img, Text, Wrapper, Titlee, Box } from "./style";
 import img from "../../assets/imgs/advantages-card-img.png";
 import img2 from "../../assets/imgs/advantages-card-img2.png";
 import img8 from "../../assets/imgs/advantages-card-img8.png";
@@ -20,7 +12,7 @@ import Form from "../Form";
 import { useTranslation } from "react-i18next";
 
 function Advantages() {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <TitleContainer height="315px">
@@ -70,29 +62,13 @@ function Advantages() {
           <Text>{t("advantages.cards.text8")}</Text>
         </Card>
       </Cards>
-      <Button>TOP 5</Button>
-      <Titlee>{t("advantages.title")} </Titlee>
-        <Form />
-      {/* <ImgDiv>
-        <H6>TRUE FITNESS</H6>
-        <Title>
-          Получите эксклюзивное предложение на тренажеры TRUE FITNESS
-        </Title>
-        <ClubText>
-          Мы будем рады проконсультировать Вас и помочь с подбором оборудования
-        </ClubText>
-        <Form>
-            <Input placeholder="имя" />
-            <Input placeholder="+7(999)-999-99-99" />
-            <Input placeholder="e-mail" />
-            <ButtonForm>отправить</ButtonForm>
-        </Form>
-        <H6>
-          «Нажимая на кнопку, вы даете согласие на обработку персональных данных
-          и <br />
-          соглашаетесь c политикой конфиденциальности»
-        </H6>
-      </ImgDiv> */}
+      <Box>
+        <Button className="top-btn">
+          TOP 5
+        </Button>
+        <Titlee>{t("advantages.title")} </Titlee>
+      </Box>
+      <Form />
     </Wrapper>
   );
 }

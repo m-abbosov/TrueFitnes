@@ -6,7 +6,6 @@ import { ReactComponent as burchak } from "../../assets/icons/6burchak.svg";
 import { ReactComponent as car } from "../../assets/icons/car.svg";
 import { ReactComponent as settings } from "../../assets/icons/Settings.svg";
 export const Wrapper = styled.div`
-  width: 1440px;
   height: 1200px;
   background: #eeeeee;
   margin: auto;
@@ -81,5 +80,6 @@ export const P = styled.div`
 `;
 
 export const Img = styled.img`
-  height: 1088px;
+  height: 100%;
+  
 `;

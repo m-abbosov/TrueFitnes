@@ -2,6 +2,7 @@ import styled from "styled-components";
 import img from "../../assets/imgs/formbg.png";
 
 export const Wrapper = styled.div`
+  width: 100vw;
   .react-international-phone-input-container {
     padding: 15px;
     height: 60px;
@@ -27,14 +28,22 @@ export const Wrapper = styled.div`
 `;
 
 export const ImgDiv = styled.div`
-  width: 1440px;
+  width: 100vw;
   height: 717px;
   padding: 55px;
 
   background-image: url(${img});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
+
 export const Back = styled.div`
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Form, H1, Img, Input, P, Wrapper } from "./style";
-import img from "../../assets/imgs/club.png";
+import img from "../../assets/imgs/club.jpg";
 import { useTranslation } from "react-i18next";
 import { PhoneInput } from "react-international-phone";
 import { ToastContainer, toast } from "react-toastify";

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 1440px;
   height: 784px;
   padding: 80px 100px;
   display: flex;
+  justify-content: center;
   gap: 45px;
-  background-color: #D9D9D9;
+  background-color: #EEE;
 `;
 export const IMG = styled.img`
   width: 585px;

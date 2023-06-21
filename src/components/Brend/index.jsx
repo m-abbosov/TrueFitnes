@@ -17,6 +17,7 @@ import {
   TrueSports,
   Wrapper,
   Years,
+  Line
 } from "./style";
 import { ClubText, Title, TitleContainer } from "../OpenClub/style";
 import AboutTrue from "../AboutTrue";
@@ -29,7 +30,6 @@ import imgCard4 from "../../assets/imgs/innovationsCard4.png";
 import imgCard5 from "../../assets/imgs/innovationsCard5.png";
 import imgCard6 from "../../assets/imgs/innovationsCard6.png";
 import Form from "../Form";
-import BrendCarousel from "../BrendCarousel";
 import { useTranslation } from "react-i18next";
 
 
@@ -55,7 +55,8 @@ function Brand() {
         <AboutTrue img={about} button={false} />
         <History>
           <H1>{t("brend.about_container.title1")}</H1>
-          <H1>{t("brend.about_container.title2")}</H1>
+          <H1 color="black">{t("brend.about_container.title2")}</H1>
+          <Line />
           <P>{t("brend.about_container.text1")}</P>
           <P>{t("brend.about_container.text2")}</P>
         </History>
@@ -111,7 +112,6 @@ function Brand() {
           </InnovationsCard>
         </Cards>
       </Innovations>
-      <BrendCarousel />
       <Form />
     </Wrapper>
   );

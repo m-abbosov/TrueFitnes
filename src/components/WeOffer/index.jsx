@@ -15,6 +15,7 @@ function WeOffer() {
   const { t } = useTranslation();
   return (
     <Wrapper>
+      <div></div>
       <TextCotainer>
         <h1 className="title" style={{ color: "#01AEE7" }}>
           {t("home.we_offer.title")}

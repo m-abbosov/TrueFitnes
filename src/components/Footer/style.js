@@ -6,11 +6,12 @@ import { ReactComponent as facebook } from "../../assets/icons/ri_facebook-fill.
 
 export const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
+  gap: 60px;
   background-color: #01aee7;
   padding: 44px 100px;
   color: #ffffff;
-  justify-content: space-between;
-  width: 1440px;
+  width: 100%;
 `;
 export const FooterDiv = styled.div`
   display: flex;

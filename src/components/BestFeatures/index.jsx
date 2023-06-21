@@ -12,7 +12,7 @@ function BestFeatures() {
           <Title>{t("home.best_features.img_title_1")}</Title>
           <Span></Span>
           <P>{t("home.best_features.img_text_1")}</P>
-        </ImgDiv   >
+        </ImgDiv>
         <Div>
           <Title>{t("home.best_features.bg_title_1")}</Title>
           <Span></Span>

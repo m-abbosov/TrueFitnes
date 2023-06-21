@@ -1,35 +1,43 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 1440px;
-  height: 836px;
   background: #f5f5f5;
   display: flex;
+  justify-content: center;
   padding: 148px 26px 32px 26px;
   gap: 20px;
 `;
 
 export const Container = styled.div`
-  width: 684px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 `;
 export const ImgDiv = styled.div`
-  width: 684px;
+  width: 100%;
   height: 426px;
-  padding-top: 179px;
-  padding-left: 72px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  background-image: url(${({img})=>img});
+  justify-content: end;
+  gap: 38px;
+  padding: 30px;
+  background-image: url(${({ img }) => img});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s;
+
+
+  @media (min-width: 1450px) {
+    height: 100vh;
+  }
 `;
 export const Div = styled.div`
-  width: 684px;
+  width: 100%;
   height: 213px;
   background: #01aee7;
-  padding: 18px 75px;
+  padding: 21px 46px 16px 53px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -49,12 +57,12 @@ export const Span = styled.div`
   background: #fff500;
 `;
 export const P = styled.p`
- font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-text-transform: capitalize;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
 
-color: #FFFFFF;
+  color: #ffffff;
 `;

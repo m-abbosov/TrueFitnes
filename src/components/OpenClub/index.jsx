@@ -13,7 +13,7 @@ import {
   TitleContainer,
   Wrapper,
 } from "./style";
-import img from "../../assets/imgs/club.png";
+import img from "../../assets/imgs/club.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-international-phone/style.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -80,9 +80,9 @@ function OpenClub() {
         <Form onSubmit={handleSubmit}>
           <FormTitle size="30px">Отправить заявку</FormTitle>
           <FormTitle>Ваше имя</FormTitle>
-          <Input placeholder="имя" />
+          <Input type="text" required placeholder="имя" />
           <FormTitle>Е-mail:</FormTitle>
-          <Input placeholder="Е-mail:" />
+          <Input type="email" required placeholder="Е-mail:" />
           <FormTitle>Номер телефона</FormTitle>
           <PhoneInput
             defaultCountry="uz"
@@ -95,67 +95,108 @@ function OpenClub() {
           <FormTitle>Город</FormTitle>
           <Input placeholder="Город" />
           <FormTitle>Хотите открыть:</FormTitle>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Фитнес студия</FormText>
+          <Label>
+            <input
+              type="radio"
+              name="open"
+              id="fitness-club"
+              value="Фитнес клуб"
+            />
+            <FormText htmlFor="fitness-club">Фитнес клуб</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Фитнес клуб</FormText>
+          <Label>
+            <input
+              type="radio"
+              name="open"
+              id="fitness-studio"
+              value="Фитнес студия"
+            />
+            <FormText htmlFor="fitness-studio">Фитнес студия</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Домашний спортзал</FormText>
+          <Label>
+            <input
+              type="radio"
+              name="open"
+              id="corpo-sport"
+              value="Корпоративный спортзал"
+            />
+            <FormText htmlFor="corpo-sport">Корпоративный спортзал</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Тренажерный зал в отеле, санатории</FormText>
+          <Label>
+            <input
+              type="radio"
+              name="open"
+              id="stanatory"
+              value="Тренажерный зал в отеле, санатории"
+            />
+            <FormText htmlFor="stanatory">
+              Тренажерный зал в отеле, санатории
+            </FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Корпоративный спортзал</FormText>
+          <Label>
+            <input id="home-sport" type="radio" name="open" />
+            <FormText htmlFor="home-sport">Домашний спортзал</FormText>
           </Label>
 
           <FormTitle>Планируемый срок запуска проекта:</FormTitle>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Фитнес студия</FormText>
+          <Label>
+            <input type="radio" name="time" id="fast" value="Срочно" />
+            <FormText htmlFor="fast">Срочно</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Фитнес клуб</FormText>
+          <Label>
+            <input type="radio" name="time" id="month-1" value="до 1 месяца" />
+            <FormText htmlFor="month-1">до 1 месяца</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Домашний спортзал</FormText>
+          <Label>
+            <input type="radio" name="time" id="month-3" value="до 3 месяцев" />
+            <FormText htmlFor="month-3">до 3 месяцев</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Тренажерный зал в отеле, санатории</FormText>
+          <Label>
+            <input type="radio" name="time" id="month-6" value="до 6 месяцев" />
+            <FormText htmlFor="month-6">до 6 месяцев</FormText>
           </Label>
-          <Label htmlFor="">
-            <input type="radio" name="open" />
-            <FormText>Корпоративный спортзал</FormText>
+          <Label>
+            <input
+              type="radio"
+              name="time"
+              id="month-12"
+              value="до 12 месяцев"
+            />
+            <FormText htmlFor="month-12">до 12 месяцев</FormText>
           </Label>
+          <Label>
+            <input
+              type="radio"
+              name="time"
+              id="month-12p"
+              value="более 12 месяцев"
+            />
+            <FormText htmlFor="month-12p">более 12 месяцев</FormText>
+          </Label>
+
           <FormTitle>Какие услуги Вас интересуют:</FormTitle>
           <Label>
-            <input type="checkbox" name="open" />
-            <FormText>Корпоративный спортзал</FormText>
+            <input type="checkbox" id="consult" value="Консультация" />
+            <FormText htmlFor="consult">Консультация</FormText>
           </Label>
           <Label>
-            <input type="checkbox" name="open" />
-            <FormText>Корпоративный спортзал</FormText>
+            <input type="checkbox" id="selection" value="Подбор оборудования" />
+            <FormText htmlFor="selection">Подбор оборудования</FormText>
           </Label>
           <Label>
-            <input type="checkbox" name="open" />
-            <FormText>Корпоративный спортзал</FormText>
+            <input
+              type="checkbox"
+              id="simulators"
+              value="Расстановка тренажеров на плане"
+            />
+            <FormText htmlFor="simulators">
+              Расстановка тренажеров на плане
+            </FormText>
           </Label>
           <Label>
-            <input type="checkbox" name="open" />
-            <FormText>Корпоративный спортзал</FormText>
+            <input type="checkbox" id="lizing" value="Лизинг" />
+            <FormText htmlFor="lizing">Лизинг</FormText>
           </Label>
-          <FormTitle>Загрузить план помещения</FormTitle>
-          <Button>ADD FILES</Button>
           <FormTitle>Комментарий</FormTitle>
           <Input height={"103px"} />
           <Button type="submit">Oтпрвить</Button>

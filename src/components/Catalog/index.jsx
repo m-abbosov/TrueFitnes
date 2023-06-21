@@ -1,4 +1,4 @@
-import { Card, Cards, H1, Wrapper, Title, Span } from "./style";
+import { Card, Cards, H1, Wrapper, Title, Span, CardBack } from "./style";
 import img1 from "../../assets/imgs/catalog1.png";
 import img2 from "../../assets/imgs/ctalog2.png";
 import img3 from "../../assets/imgs/catalog3.png";
@@ -25,6 +25,7 @@ function Catalog() {
             handleNavigate("https://prowellness.uz/categories/begovye_dorozhki")
           }
         >
+          <CardBack src={img1} al="" />
           <Title>{t("home.catalog.img1")}</Title>
           <Span></Span>
         </Card>
@@ -34,6 +35,7 @@ function Catalog() {
             handleNavigate("https://prowellness.uz/categories/velotrenazhery")
           }
         >
+          <CardBack src={img2} al="" />
           <Title>{t("home.catalog.img2")}</Title>
           <Span></Span>
         </Card>
@@ -45,6 +47,7 @@ function Catalog() {
             )
           }
         >
+          <CardBack src={img3} al="" />
           <Title>{t("home.catalog.img3")}</Title>
           <Span></Span>
         </Card>
@@ -56,6 +59,7 @@ function Catalog() {
           }
           url={img4}
         >
+          <CardBack src={img4} al="" />
           <Title>{t("home.catalog.img4")}</Title>
           <Span></Span>
         </Card>
@@ -67,6 +71,7 @@ function Catalog() {
           }
           url={img5}
         >
+          <CardBack src={img5} al="" />
           <Title>{t("home.catalog.img5")}</Title>
           <Span></Span>
         </Card>
@@ -78,6 +83,7 @@ function Catalog() {
           }
           url={img6}
         >
+          <CardBack src={img6} al="" />
           <Title>{t("home.catalog.img6")}</Title>
           <Span></Span>
         </Card>

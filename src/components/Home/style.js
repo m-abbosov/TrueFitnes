@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   padding: 15px 0;
   margin-top: 30px;
 `;
 export const VideoContainer = styled.div`
-  width: 1440px;
+  width: 100%;
   height: 672px;
   position: relative;
 `;
 
 export const Video = styled.video`
-  width: 1440px;
+  width: 100%;
   height: 672px;
   object-fit: cover;
   position: absolute;

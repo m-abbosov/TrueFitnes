@@ -1,15 +1,20 @@
 import styled from "styled-components";
+import BackImg from "../../assets/imgs/AboutBack.png";
 
 export const Wrapper = styled.div`
-  width: 1440px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 `;
+
 export const About = styled.div`
-  width: 1440px;
+  width: 100%;
   height: 978px;
-  background-color: #f5f5f5;
+  background-image: url(${BackImg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,11 +39,11 @@ export const Text = styled.div`
 `;
 
 export const AboutContainer = styled.div`
-  width: 1440px;
-  background: #d9d9d9;
+  background: #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 export const History = styled.div`
@@ -48,6 +53,12 @@ export const History = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 28px;
+`;
+
+export const Line = styled.div`
+  width: 190px;
+  height: 1px;
+  background: #01aee7;
 `;
 
 export const H1 = styled.h1`
@@ -67,6 +78,7 @@ export const P = styled.div`
   line-height: 29px;
   text-transform: capitalize;
   color: #000000;
+  text-align: left;
 `;
 
 export const Years = styled.div`
@@ -102,8 +114,6 @@ export const TrueSports = styled.div`
   width: 520px;
 `;
 export const Innovations = styled.div`
-  width: 1440px;
-  height: 1180px;
   background: #01aee7;
   padding: 65px 100px;
   text-align: center;
@@ -120,19 +130,21 @@ export const InnovationsTitle = styled.div`
   margin-bottom: 40px;
 `;
 export const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  align-items: center;
+  justify-content: center;
   gap: 20px;
-  row-gap: 30px;
+  row-gap: 50px;
 `;
 
 export const InnovationsCard = styled.div`
-  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 34px;
   border-bottom: 3px solid #ffd233;
 `;
+
 export const InnovationsImg = styled.img`
   width: 400px;
   height: 368px;
@@ -148,4 +160,3 @@ export const CardText = styled.p`
   text-align: left;
   color: #ffffff;
 `;
-

@@ -28,13 +28,30 @@ export const Cards = styled.div`
 export const Card = styled.div`
   width: 610px;
   height: 368px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 16px;
-  background-image: url(${({ url }) => url});
-  cursor: pointer;
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+`;
+
+export const CardBack = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s ease all;
 `;
 export const Title = styled.div`
   font-family: "Montserrat";

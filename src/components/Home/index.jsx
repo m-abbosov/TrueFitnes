@@ -16,7 +16,6 @@ import AboutTrue from "../AboutTrue";
 import HomeForm from "../HomeForm";
 import BestFeatures from "../BestFeatures";
 import img from "../../assets/imgs/aboutTrue.png";
-import OtherProject from "../OtherProject";
 import { useTranslation } from "react-i18next";
 
 function Home() {
@@ -51,7 +50,6 @@ function Home() {
       <Club />
       <AboutTrue img={img} button={true} />
       <HomeForm />
-      <OtherProject />
     </Wrapper>
   );
 }

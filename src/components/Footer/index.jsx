@@ -20,12 +20,12 @@ function Footer() {
   const catalog = [
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/begovye_dorozhki",
       title: "Кардио тренажеры",
     },
     {
       id: Math.random(),
-      link: "",
+      link: "https://prowellness.uz/categories/nagruzhaemye_diskami",
       title: "Composite Strength",
     },
     {
@@ -62,7 +62,7 @@ function Footer() {
         <Texts>
           {catalog.map((item) => (
             <P
-              onClick={() => window.open("https://prowellness.uz/", "__blank")}
+              onClick={() => window.open(item.link, "__blank")}
               key={item.id}
             >
               {item.title}

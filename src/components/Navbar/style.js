@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
 export const Logo = styled.img`
   width: 611px;
   height: 100px;
+  object-fit: contain;
   cursor: pointer;
 `;
 export const WrapperLogo = styled.div`
-  width: 1240px;
+  width: 90%;
   display: flex;
-  justify-content: end;
-  gap: 84px;
+  justify-content: space-between;
   border-bottom: 1px solid black;
   /* padding-bottom: 16px; */
   padding: 24px 0 14px 0;
@@ -47,7 +47,8 @@ export const Button = styled.button`
 export const Links = styled.div`
   display: flex;
   padding: 16px 100px;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 120px;
   width: 100%;
 `;
 export const Link = styled.div`

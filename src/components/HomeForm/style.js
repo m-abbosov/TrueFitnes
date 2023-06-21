@@ -2,9 +2,13 @@ import styled from "styled-components";
 import img from "../../assets/imgs/homeForm.png";
 
 export const Wrapper = styled.div`
-  width: 1440px;
   height: 805px;
+
   background-image: url(${img});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding: 126px 100px;
   margin: auto;
   .react-international-phone-input-container {

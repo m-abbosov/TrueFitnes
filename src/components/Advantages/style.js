@@ -2,7 +2,7 @@ import styled from "styled-components";
 import img from "../../assets/imgs/formbg.png";
 
 export const Wrapper = styled.div`
-  width: 1440px;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,6 @@ export const Cards = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 1440px;
-  /* height: 1362px; */
   background: #ffffff;
   gap: 20px;
 `;
@@ -34,7 +33,6 @@ export const Img = styled.img`
   object-fit: cover;
 `;
 export const H1 = styled.div`
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -46,9 +44,8 @@ export const H1 = styled.div`
   margin-bottom: 14px;
 `;
 export const Text = styled.div`
-  font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 13px;
   line-height: 20px;
   text-align: center;
@@ -57,7 +54,6 @@ export const Text = styled.div`
 `;
 
 export const Titlee = styled.div`
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -133,4 +129,21 @@ export const ButtonForm = styled.button`
   text-transform: uppercase;
   color: #ffffff;
   border: none;
+`;
+
+export const Box = styled.div`
+  position: relative;
+  border-top: 1px solid #01aee7;
+  border-bottom: 1px solid #01aee7;
+  
+  display: flex;
+  align-items: center;
+  padding: 48px;
+
+  .top-btn {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+  }
 `;
