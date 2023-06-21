@@ -36,6 +36,7 @@ function HomeForm() {
     formData.append("city", null);
     formData.append("want", null);
     formData.append("term", null);
+    formData.append("size", null);
     formData.append("interested", null);
     formData.append("comments", null);
 

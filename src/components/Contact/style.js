@@ -3,16 +3,17 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 15px;
 `;
 export const MapVsContact = styled.div`
-  width: 1440px;
+  width: 100%;
   height: 662px;
   display: flex;
   margin-top: 20px;
 `;
 export const ContactDiv = styled.div`
-  width: 720px;
+  width: 50%;
   height: 662px;
   background: #d9d9d9;
   padding: 140px 115px;

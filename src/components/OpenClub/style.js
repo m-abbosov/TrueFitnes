@@ -29,7 +29,6 @@ export const TitleContainer = styled.div`
 
 export const FormContainer = styled.div`
   width: 100%;
-  height: 1547px;
   background: #eee;
   padding: 65px 0;
 `;

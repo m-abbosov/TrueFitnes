@@ -24,6 +24,7 @@ function OpenClub() {
   const [open, setOpen] = useState("");
   const [time, setTime] = useState("");
   const [interest, setInterest] = useState("");
+  const [size, setSize] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,6 +53,7 @@ function OpenClub() {
     formData.append("city", e.target[4].value);
     formData.append("want", open);
     formData.append("term", time);
+    formData.append("size", size);
     formData.append("interested", interest);
     formData.append("comments", e.target[20].value);
     fetch(" https://sheetdb.io/api/v1/fl9x6zmo27z3l", {
@@ -85,6 +87,9 @@ function OpenClub() {
   const handleTime = (e) => {
     setTime(e.target.value);
   };
+  const handleSize = (e) => {
+    setSize(e.target.value);
+  };
 
   const handleInterest = (e) => {
     if (interest.trim() === "") {
@@ -99,7 +104,7 @@ function OpenClub() {
         <ClubText>КЛУБ TRUE</ClubText>
         <Title>Открыть клуб вместе с TRUE</Title>
       </TitleContainer>
-      <LazyLoadImage className="d-block m-auto" width="1350px" src={img} />
+      <img alt="" className="d-block m-auto my-5" width="1350px" src={img} />
       <FormContainer>
         <Form onSubmit={handleSubmit}>
           <FormTitle size="30px">Отправить заявку</FormTitle>
@@ -232,6 +237,79 @@ function OpenClub() {
             />
             <FormText htmlFor="month-12p">более 12 месяцев</FormText>
           </Label>
+
+          <FormTitle>Общая площадь тренажерного зала:</FormTitle>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-100"
+              value="до 100 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="from-100">до 100 м2</FormText>
+          </Label>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-200"
+              value="100 - 200 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="from-200">100 - 200 м2</FormText>
+          </Label>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-400"
+              value="200 - 400 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="month-3">200 - 400 м2</FormText>
+          </Label>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-700"
+              value="400 - 700 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="from-700">400 - 700 м2</FormText>
+          </Label>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-1000"
+              value="700 - 1000 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="from-1000">700 - 1000 м2</FormText>
+          </Label>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-1500"
+              value="1000 - 1500 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="from-1500">1000 - 1500 м2</FormText>
+          </Label>
+          <Label>
+            <input
+              type="radio"
+              name="size"
+              id="from-1500p"
+              value="Более 1500 м2"
+              onChange={handleSize}
+            />
+            <FormText htmlFor="from-1500p">Более 1500 м2</FormText>
+          </Label>
+
           <FormTitle>Какие услуги Вас интересуют:</FormTitle>
           <Label>
             <input
@@ -262,17 +340,8 @@ function OpenClub() {
               Расстановка тренажеров на плане
             </FormText>
           </Label>
-          <Label>
-            <input
-              type="checkbox"
-              id="lizing"
-              value="Лизинг"
-              onChange={handleInterest}
-            />
-            <FormText htmlFor="lizing">Лизинг</FormText>
-          </Label>
           <FormTitle>Комментарий</FormTitle>
-          <Input height={"103px"} />
+          <Input maxLength="200" height={"103px"} />
           <Button type="submit">Oтпрвить</Button>
         </Form>
       </FormContainer>
