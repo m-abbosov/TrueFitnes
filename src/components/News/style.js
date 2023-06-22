@@ -23,7 +23,6 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.div`
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -32,7 +31,6 @@ export const Title = styled.div`
   color: #000000;
 `;
 export const P = styled.div`
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -41,7 +39,6 @@ export const P = styled.div`
   color: #000000;
 `;
 export const Date = styled.div`
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;

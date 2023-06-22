@@ -69,14 +69,14 @@ function Form() {
     <Wrapper id="club-3d">
       <ImgDiv>
         <Back>
-          <ClubText>TRUE FITNESS</ClubText>
-          <Title>
-            {t("form.title")}
-            <span style={{ color: "#01AEE7" }}>{t("form.title2")}</span>
-            {t("form.title3")}
+          <ClubText size="lg">TRUE FITNESS</ClubText>
+          <Title size="lg">
+            {t("form.title")}{" "}
+            <span style={{ color: "#01AEE7" }}>{t("form.title2")}</span>{" "}
+            {t("form.title3")}{ " "}
             <span style={{ color: "#01AEE7" }}>{t("form.title4")}</span>
           </Title>
-          <ClubText>{t("form.yellow_text")}</ClubText>
+          <ClubText size="lg">{t("form.yellow_text")}</ClubText>
           <Formm onSubmit={handleSubmit}>
             <Input
               type="text"

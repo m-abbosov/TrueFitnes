@@ -32,7 +32,7 @@ const lenguage = [
 ];
 const uzb = [
   "",
-  "Brend",
+  "Brend Haqida",
   "MAHSULOTLAR",
   "Afzalliklari",
   "Klub ochish",
@@ -127,8 +127,8 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                 {<span className={`fi fi-${currentLenguageCode}`}></span>} 
-                  {t("lenguage")}
+                {<span className={`fi fi-${currentLenguageCode}`}></span>}
+                {t("lenguage")}
               </p>
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 {lenguage.map(({ code, name, flag }) => {

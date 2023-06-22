@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Wrapper } from "./style";
 import "./style.css";
 
@@ -5,31 +6,36 @@ import CarsImg1 from "../../assets/imgs/carousel/Img1.PNG";
 import CarsImg2 from "../../assets/imgs/carousel/Img2.PNG";
 import CarsImg3 from "../../assets/imgs/carousel/Img3.PNG";
 import CarsImg4 from "../../assets/imgs/carousel/Img4.PNG";
+import { useTranslation } from "react-i18next";
 
 function Carousel() {
-  const data = [
-    {
-      id: Math.random(),
-      img: CarsImg1,
-      title: "КАРДИО ТРЕНАЖЕРЫ",
-    },
-    {
-      id: Math.random(),
-      img: CarsImg2,
-      title: "СИЛОВЫЕ ТРЕНАЖЕРЫ",
-    },
-    {
-      id: Math.random(),
-      img: CarsImg3,
-      title: "ФУНКЦИОНАЛЬНОЙ ТРЕНАЖЕРЫ",
-    },
-    {
-      id: Math.random(),
-      img: CarsImg4,
-      title: "ГРУППОВЫЕ ТРЕНАЖЕРЫ",
-    },
-  ];
+  const { t } = useTranslation();
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    setData([
+      {
+        id: Math.random(),
+        img: CarsImg1,
+        title: t("home.carousel.title1"),
+      },
+      {
+        id: Math.random(),
+        img: CarsImg2,
+        title: t("home.carousel.title2"),
+      },
+      {
+        id: Math.random(),
+        img: CarsImg3,
+        title: t("home.carousel.title3"),
+      },
+      {
+        id: Math.random(),
+        img: CarsImg4,
+        title: t("home.carousel.title4"),
+      },
+    ]);
+  }, [t]);
   return (
     <Wrapper>
       <div
@@ -70,12 +76,10 @@ function Carousel() {
                     </h2>
                     <div className="yellowLine"></div>
                     <div className="home-carousel-wrapper-div-texts-logo-text">
-                      Современное и надежное оборудование для фитнес-клубов
+                      {t("home.carousel.mainText")}
                     </div>
                     <div className="bottom-text-wrapper">
-                      <h2 className="bottomText">
-                        {item.title}
-                      </h2>
+                      <h2 className="bottomText">{item.title}</h2>
                       <svg
                         width="147"
                         height="18"

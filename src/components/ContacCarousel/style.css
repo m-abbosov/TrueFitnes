@@ -32,3 +32,31 @@
   height: 27px;
   background-image: url("../../assets/imgs/right-button.png") !important;
 }
+
+@media (max-width: 500px) {
+  .contact-carousel-button_bottom {
+    width: 6.5px !important;
+    height: 6.5px !important;
+  }
+
+  .contact-carousel-control-button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-carousel-control-button-left {
+    margin-left: -50px;
+  }
+  .contact-carousel-control-button-right {
+    margin-right: -50px;
+  }
+
+  .contact-carousel-control-button-right-icon,
+  .contact-carousel-control-button-left-icon {
+    width: 8px;
+    height: 14px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

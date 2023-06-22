@@ -8,51 +8,45 @@ import { device } from "./../../utils/responsive";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-
   background-color: #01aee7;
-  
   color: #ffffff;
   width: 100%;
+  gap: 60px;
+  padding: 44px 100px;
 
-  @media ${device.mobile} {
-    flex-wrap: wrap;
-    padding: 0;
-    justify-content: space-around;
-    height: 900px;
+  @media ${device.maxWidth} {
+    padding: 38px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+    .titleText {
+      font-size: 12px;
+      width: 200%;
+    }
   }
-  @media ${device.dectop} {
-    gap: 60px;
-    padding: 44px 100px;
-  }
-  
 `;
 export const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
-  /* max-width: 23%; */
-  @media ${device.mobile} {
-    gap: 5px;
-    max-width: ${({mobile})=>mobile?'90%':'145px'};
-    max-height: ${({height})=>height?height:"fit-content"};
-  }
-  @media ${device.dectop} {
-    gap: 28px;
-    max-width: 23%;
-    max-height: fit-content;
+  gap: 28px;
+  width: 23%;
+  max-height: fit-content;
+  @media ${device.maxWidth} {
+    width: 100%;
+    gap: 12px;
   }
 `;
 export const Texts = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 16px;
 
   .titleText {
     font-weight: 600;
   }
-  @media ${device.mobile} {
-    gap: 5px;
-  }
-  @media ${device.dectop} {
-   gap: 16px;
+  @media ${device.maxWidth} {
+    width: 100%;
   }
 `;
 
@@ -68,19 +62,18 @@ export const P = styled.a`
   cursor: pointer;
   transition: 500ms;
 
-  @media ${device.mobile} {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  @media ${device.dectop} {
-    font-size: 13px;
-    line-height: 16px;
-  }
+  font-size: 13px;
+  line-height: 16px;
 
   &:hover {
     cursor: pointer;
     border-bottom: 0.5px solid white;
     color: #ffffff;
+  }
+
+  @media ${device.maxWidth} {
+    line-height: normal;
+    font-size: 10px;
   }
 `;
 export const SentEmail = styled.div`
@@ -149,17 +142,14 @@ export const Youtube = styled(youtube)`
 `;
 
 export const Div = styled.div`
-  @media ${device.mobile} {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-height: ${({height})=>height?height:"fit-content"};
+  display: flex;
+  column-gap: 126px;
+  max-height: fit-content;
+  flex-direction: row;
 
-  }
-  @media ${device.dectop} {
-    display: flex;
-    column-gap: 126px;
-    max-height: fit-content;
-    flex-direction: row;
+  @media ${device.maxWidth} {
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
   }
 `;

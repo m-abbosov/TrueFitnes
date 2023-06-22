@@ -12,6 +12,7 @@ function Catalog() {
   const handleNavigate = (link) => {
     window.open(link, "_blank").focus();
   };
+  
   return (
     <Wrapper>
       <H1>

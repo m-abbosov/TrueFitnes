@@ -14,7 +14,7 @@ function MyCarousel() {
   return (
     <Wrapper>
       <div
-        id="carouselExampleCaptions"
+        id="carouselExampleInterval"
         className="carousel slide"
         data-bs-ride="carousel"
         style={{ width: "1030px" }}
@@ -24,9 +24,11 @@ function MyCarousel() {
             return (
               <button
                 type="button"
-                data-bs-target="#carouselExampleCaptions"
+                data-bs-target="#carouselExampleInterval"
                 data-bs-slide-to={i}
-                className={`brend-caraousel-button ${i === 0 ? "active" : ""}`}
+                className={`contact-carousel-button_bottom ${
+                  i === 0 ? "active" : ""
+                }`}
                 aria-label={`Slide ${i + 1}`}
                 key={Math.random()}
               ></button>
@@ -39,6 +41,7 @@ function MyCarousel() {
               <div
                 className={`carousel-item ${i === 0 ? "active" : ""}`}
                 key={Math.random()}
+                data-bs-interval="2000"
               >
                 <img src={item} className="d-block w-100 " alt="..." />
               </div>
@@ -51,7 +54,7 @@ function MyCarousel() {
           contact-carousel-control-button-left
           "
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleInterval"
           data-bs-slide="prev"
         >
           <span
@@ -66,7 +69,7 @@ function MyCarousel() {
           contact-carousel-control-button-right
           "
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleInterval"
           data-bs-slide="next"
         >
           <span

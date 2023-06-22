@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { PhoneInput } from "react-international-phone";
+import { useTranslation } from "react-i18next";
 import {
   Button,
   ClubText,
@@ -17,13 +19,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-international-phone/style.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import { PhoneInput } from "react-international-phone";
 function OpenClub() {
   const [phone, setPhone] = useState("");
   const [open, setOpen] = useState("");
   const [time, setTime] = useState("");
   const [interest, setInterest] = useState("");
   const [size, setSize] = useState("");
+
+  const { t } = useTranslation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -100,18 +103,26 @@ function OpenClub() {
   return (
     <Wrapper>
       <TitleContainer>
-        <ClubText>КЛУБ TRUE</ClubText>
-        <Title>Открыть клуб вместе с TRUE</Title>
+        <ClubText>{t("open_club.blue_fon.text")}</ClubText>
+        <Title>{t("open_club.blue_fon.title")}</Title>
       </TitleContainer>
-      <img alt="" className="d-block m-auto my-5" width="1350px" src={img} />
+      <img alt="" className="openclub-img" src={img} />
       <FormContainer>
         <Form onSubmit={handleSubmit}>
-          <FormTitle size="30px">Отправить заявку</FormTitle>
-          <FormTitle>Ваше имя</FormTitle>
-          <Input type="text" required placeholder="имя" />
-          <FormTitle>Е-mail:</FormTitle>
-          <Input type="email" required placeholder="Е-mail:" />
-          <FormTitle>Номер телефона</FormTitle>
+          <FormTitle size="30px">{t("open_club.form.title")}</FormTitle>
+          <FormTitle>{t("open_club.form.input_name_title")}</FormTitle>
+          <Input
+            type="text"
+            required
+            placeholder={t("open_club.form.input_name_title")}
+          />
+          <FormTitle>{t("open_club.form.input_email_title")}</FormTitle>
+          <Input
+            type="email"
+            required
+            placeholder={t("open_club.form.input_email_title")}
+          />
+          <FormTitle>{t("open_club.form.input_phone_title")}</FormTitle>
           <PhoneInput
             defaultCountry="uz"
             value={phone}
@@ -120,9 +131,13 @@ function OpenClub() {
             name="data[phone]"
             hideDropdown={true}
           />
-          <FormTitle>Город</FormTitle>
-          <Input placeholder="Город" type="text" required />
-          <FormTitle>Хотите открыть:</FormTitle>
+          <FormTitle>{t("open_club.form.input_city_title")}</FormTitle>
+          <Input
+            placeholder={t("open_club.form.input_city_title")}
+            type="text"
+            required
+          />
+          <FormTitle>{t("open_club.form.radio_open_title")}</FormTitle>
           <Label>
             <input
               type="radio"
@@ -175,7 +190,7 @@ function OpenClub() {
             />
             <FormText htmlFor="home-sport">Домашний спортзал</FormText>
           </Label>
-          <FormTitle>Планируемый срок запуска проекта:</FormTitle>
+          <FormTitle>{t("open_club.form.radio_date_title")}</FormTitle>
           <Label>
             <input
               type="radio"
@@ -237,7 +252,7 @@ function OpenClub() {
             <FormText htmlFor="month-12p">более 12 месяцев</FormText>
           </Label>
 
-          <FormTitle>Общая площадь тренажерного зала:</FormTitle>
+          <FormTitle>{t("open_club.form.radio_size_title")}</FormTitle>
           <Label>
             <input
               type="radio"
@@ -266,7 +281,7 @@ function OpenClub() {
               value="200 - 400 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="month-3">200 - 400 м2</FormText>
+            <FormText htmlFor="from-400">200 - 400 м2</FormText>
           </Label>
           <Label>
             <input
@@ -309,7 +324,7 @@ function OpenClub() {
             <FormText htmlFor="from-1500p">Более 1500 м2</FormText>
           </Label>
 
-          <FormTitle>Какие услуги Вас интересуют:</FormTitle>
+          <FormTitle>{t("open_club.form.select_title")}</FormTitle>
           <Label>
             <input
               type="checkbox"
@@ -339,9 +354,9 @@ function OpenClub() {
               Расстановка тренажеров на плане
             </FormText>
           </Label>
-          <FormTitle>Комментарий</FormTitle>
+          <FormTitle>{t("open_club.form.comentary")}</FormTitle>
           <Input maxLength="200" height={"103px"} />
-          <Button type="submit">ОТПРАВИТЬ</Button>
+          <Button type="submit">{t("open_club.form.button")}</Button>
         </Form>
       </FormContainer>
       <ToastContainer />

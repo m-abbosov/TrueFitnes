@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from '../../utils/responsive';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -19,6 +20,10 @@ export const Wrapper = styled.div`
       border: none;
       font-weight: 700;
       font-size: 20px;
+
+      @media ${device.maxWidth} {
+        font-size: 10px;
+      }
     }
     ::placeholder {
       color: black;
@@ -27,12 +32,21 @@ export const Wrapper = styled.div`
       outline: none;
     }
   }
+
+  @media ${device.maxWidth} {
+    flex-direction: column;
+    padding: 10px;
+  }
 `;
 
 export const Img = styled.img`
   width: 50%;
   margin-top: 90px;
   object-fit: cover;
+
+  @media ${device.maxWidth} {
+    width: 100%;
+  }
 `;
 
 export const Form = styled.form`
@@ -40,6 +54,11 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 31px;
+
+  @media ${device.maxWidth} {
+    width: 100%;
+    gap: 20px;
+  }
 `;
 export const Input = styled.input`
   width: 100%;
@@ -54,6 +73,11 @@ export const Input = styled.input`
   :focus {
     outline: none;
   }
+
+  @media ${device.maxWidth} {
+    font-size: 10px;
+    height: 35px;
+  }
 `;
 
 export const H1 = styled.div`
@@ -65,23 +89,22 @@ export const H1 = styled.div`
   text-transform: uppercase;
 
   color: #01aee7;
+
+  @media ${device.maxWidth} {
+    font-size: 20px;
+    line-height: normal;
+  }
 `;
 export const Button = styled.button`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+
   padding: 17px 51px;
-  gap: 10px;
   width: 209px;
   height: 63px;
   background: #01aee7;
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  :active {
-    opacity: 0.8;
-    scale: 0.98;
-  }
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -89,6 +112,19 @@ export const Button = styled.button`
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
+
+  :active {
+    opacity: 0.8;
+    scale: 0.98;
+  }
+
+  @media ${device.maxWidth} {
+    padding: 10px 30px;
+    font-size: 10px;
+    width: 150px;
+    height: auto;
+    line-height: normal;
+  }
 `;
 
 export const P = styled.div`
@@ -98,4 +134,10 @@ export const P = styled.div`
   font-size: 15px;
   line-height: 18px;
   color: #000000;
+
+  @media ${device.maxWidth} {
+    font-size: 10px;
+    line-height: normal;
+    width: 95%;
+  }
 `;

@@ -6,10 +6,10 @@
     "input_email": "Email"
   },
   "navbar": {
-    "button": "Arizangizni yuboring",
+    "button": "Ariza qoldiring",
     "link_brand": "Brend haqida",
     "link_products": "Mahsulotlar",
-    "link_advantages": "Afzalliklari",
+    "link_advantages": "Afzalliklar",
     "link_open_club": "Club ochish",
     "link_contacts": "Kontaktlar",
     "uzbek": "Узб",
@@ -18,7 +18,13 @@
   "home": {
     "bg_video": "TRUE FITNESS - AQSHDAGI  PREMİUM USKUNALAR",
     "blue_fon": "TRUE dunyodagi etakchi premium fitnes uskunalari ishlab chiqaruvchisi",
-    "carousel": {},
+    "carousel": {
+      "title1": "KARDIO ASBOBLARI",
+      "title2": "KUCH TRENERLAR",
+      "title3": "FUNKSIONAL TRENERLAR",
+      "title4": "GURUH TRENERLAR",
+      "mainText": "Fitnes klublari uchun zamonaviy va ishonchli uskunalar"
+    },
     "best_features": {
       "img_title_1": "Eng yaxshi xususiyatlar",
       "img_text_1": "Bizning murabbiylarimiz sinfdagi eng yaxshi ko'rsatkichlarga ega, kuchliroq ishlashdan kengaytirilgan funksionallikka qadar.",
@@ -46,13 +52,13 @@
     },
     "catalog": {
       "title_span": "Mahsulotlar katalogi",
-      "title":" Haqiqiy murabbiylar",
+      "title": " True simulyatorlari",
       "img1": "CARDIO yugurish yo'laklari",
-      "img2": "KARDIO VELOLOKI",
+      "img2": "KARDIO MASHQ VELOSISI",
       "img3": "KARDIO ELLIPTIK",
-      "img4": "FUNKSIONAL TA'LIM",
-      "img5": "Kuchni mashq qilish uchun uskunalar",
-      "img6": "BEPUL OG'IRLIKLAR VA SAQLASH"
+      "img4": "FUNKTSIONAL MASHG'ULOTLAR",
+      "img5": "Kuchni mashqlari uchun uskunalar",
+      "img6": "Yaxshi vazn olish va saqlash"
     },
     "club": {
       "title": "Klubingizning bepul 3D loyihasini oling",
@@ -79,118 +85,109 @@
       "text": "BRENDIMIZ HAQIDA"
     },
     "about": {
-      "text1":"Bu mukammallik bizning mashinalarimizni yaratishda foydalanadigan yuqori sifatli, bardoshli materiallar va texnologiyalardan kelib chiqadi. Ammo bu bizning mijozlarimiz va ularning ehtiyojlariga bag'ishlanishimiz orqali yaratilgan.",
-      "text2":"Tajribali jamoamiz ob'ektni rejalashtirishdan tortib, xonalaringizni eng so'nggi texnologiyalar bilan ta'mirlash va jihozlashgacha bo'lgan keng qamrovli xizmatni taklif etadi. Sizning ishonchli hamkoringiz sifatida biz sizning biznesingizni yillar va yillar davomida samarali davom ettirish uchun qo'limizdan kelganini qilamiz.",
-      "text3":"Sanoatdagi eng yaxshi xizmatlarni taqdim etishimizga ishonishingiz mumkin. Biz fitnes jihozlaringizning ishlash muddatini optimallashtirishga e'tibor qaratamiz. Biz har doim mijozlarimiz doirasini kengaytirish yo'llarini qidiramiz, xoh u sizning xodimlaringiz va o'qituvchilaringiz uchun o'quv materiallari bilan ta'minlash yoki bugungi foydalanuvchilarning ehtiyojlariga javob beradigan texnologik echimlarni ishlab chiqish.",
+      "text1": "Bu mukammallik bizning mashinalarimizni yaratishda foydalanadigan yuqori sifatli, bardoshli materiallar va texnologiyalardan kelib chiqadi. Ammo bu bizning mijozlarimiz va ularning ehtiyojlariga bag'ishlanishimiz orqali yaratilgan.",
+      "text2": "Tajribali jamoamiz ob'ektni rejalashtirishdan tortib, xonalaringizni eng so'nggi texnologiyalar bilan ta'mirlash va jihozlashgacha bo'lgan keng qamrovli xizmatni taklif etadi. Sizning ishonchli hamkoringiz sifatida biz sizning biznesingizni yillar va yillar davomida samarali davom ettirish uchun qo'limizdan kelganini qilamiz.",
+      "text3": "Sanoatdagi eng yaxshi xizmatlarni taqdim etishimizga ishonishingiz mumkin. Biz fitnes jihozlaringizning ishlash muddatini optimallashtirishga e'tibor qaratamiz. Biz har doim mijozlarimiz doirasini kengaytirish yo'llarini qidiramiz, xoh u sizning xodimlaringiz va o'qituvchilaringiz uchun o'quv materiallari bilan ta'minlash yoki bugungi foydalanuvchilarning ehtiyojlariga javob beradigan texnologik echimlarni ishlab chiqish.",
       "text4": "TRUE bilan hamkorlik sizning kompaniyangiz muvaffaqiyatiga qanday yordam berishi mumkinligini bilish uchun biz bilan bog'laning."
     },
     "about_container": {
       "title1": "Haqiqiy fitnesning muhim bosqichlari",
       "title2": "Rivojlanish tarixi, innovatsiyalar tarixi",
-      "text1":"1972-yilda tashkil etilganidan buyon TRUE ikkita asosiy tamoyilga asos solingan: eng yuqori sifatli mahsulotlarni yaratish va ularni yuqori xizmat bilan qo'llab-quvvatlash. Yillar davomida fitnes industriyasi o'zgardi, yangi bozorlar paydo bo'ldi va mijozlarimizning ehtiyojlari o'zgardi, ammo bu tamoyillar o'zgarishsiz qolmoqda va biz tinmay texnologiyalarimizni yangilab turishda davom etamiz.",
-      "text2":"Bizning qadriyatlarimizga sodiq qolgan holda, TRUE har doim mashinalarimizni eng yangi texnologiyalar va xavfsizlik xususiyatlari bilan jihozlashga intiladi. Eng boshidanoq biz mijozlarimizga eng yaxshi ta'lim tajribasini taqdim etib, ularga xavfsiz bo'lishlariga ishonch hosil qildik. Mana 45+ yillik tariximiz davomida sanoatda erishgan ulkan yutuqlarimiz.",
+      "text1": "1972-yilda tashkil etilganidan buyon TRUE ikkita asosiy tamoyilga asos solingan: eng yuqori sifatli mahsulotlarni yaratish va ularni yuqori xizmat bilan qo'llab-quvvatlash. Yillar davomida fitnes industriyasi o'zgardi, yangi bozorlar paydo bo'ldi va mijozlarimizning ehtiyojlari o'zgardi, ammo bu tamoyillar o'zgarishsiz qolmoqda va biz tinmay texnologiyalarimizni yangilab turishda davom etamiz.",
+      "text2": "Bizning qadriyatlarimizga sodiq qolgan holda, TRUE har doim mashinalarimizni eng yangi texnologiyalar va xavfsizlik xususiyatlari bilan jihozlashga intiladi. Eng boshidanoq biz mijozlarimizga eng yaxshi ta'lim tajribasini taqdim etib, ularga xavfsiz bo'lishlariga ishonch hosil qildik. Mana 45+ yillik tariximiz davomida sanoatda erishgan ulkan yutuqlarimiz.",
       "trueSports_title": "TRUE Sports o'zining birinchi yugurish yo'lakchasini ishlab chiqadi",
-      "trueSports_text":"1972 yilda Frank Trulaske tomonidan asos solingan True Sports o'zining birinchi yugurish yo'lakchasini ishlab chiqadi va dunyodagi treadmill dizayni bo'yicha kashshoflardan biridir. Amaldagi texnologiyalar fitnes sanoatining rivojlanishiga ta'sir ko'rsatdi."
+      "trueSports_text": "1972 yilda Frank Trulaske tomonidan asos solingan True Sports o'zining birinchi yugurish yo'lakchasini ishlab chiqadi va dunyodagi treadmill dizayni bo'yicha kashshoflardan biridir. Amaldagi texnologiyalar fitnes sanoatining rivojlanishiga ta'sir ko'rsatdi."
     },
     "innovations": {
       "title": "Bizning innovatsiyalarimiz",
-      "img_title1": "Simulyator narvon Palisade",
-      "img_title2": "Simulyator narvon Palisade ",
-      "img_title3": "Simulyator narvon Palisade ",
-      "img_title4": "Simulyator narvon Palisade ",
-      "img_title5": "Simulyator narvon Palisade ",
-      "img_title6": "Simulyator narvon Palisade "
+      "img_title1": "True Palisade narvon mashinasi",
+      "img_title2": "Composite Strength bilan funktsional trening",
+      "img_title3": "TRUE Strength ramkalar ",
+      "img_title4": "TRUE Traverse lateral trener",
+      "img_title5": "TRUE Alpine Runner yugurish yo'lagi",
+      "img_title6": "Haqiqiy spektrli elliptik murabbiy"
     },
     "carousel": {
       "title": "MIJOLARIMIZDAN SHARXLAR",
-      "text":"Biz uchun mijozlarimizning o'quv jarayoni qulaylik va zavq bilan o'tishi muhim. Bizni yuqori sifatli sport anjomlari va nozik xizmati bilan lol qoldiradigan ProWellness kompaniyasi bilan hamkorlik qilayotganimizdan xursandmiz.",
+      "text": "Biz uchun mijozlarimizning o'quv jarayoni qulaylik va zavq bilan o'tishi muhim. Bizni yuqori sifatli sport anjomlari va nozik xizmati bilan lol qoldiradigan ProWellness kompaniyasi bilan hamkorlik qilayotganimizdan xursandmiz.",
       "title2": "Alisher Ortiqov",
       "text2": "Mardyke Arena / Universitet kolleji Cork bosh direktori"
     }
   },
-  "form":{
-    "title":"TRUE FITNESS uskunalari bo'yicha eksklyuziv taklifga ega bo'ling",
-    "yellow_text":"Biz sizga maslahat berishdan va uskunani tanlashda yordam berishdan mamnun bo'lamiz.",
-    "text":"Tugmani bosish orqali siz shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz va maxfiylik siyosatiga rozilik bildirasiz",
-    "button":"Yuborish"
+  "form": {
+    "title": "True FITNESS",
+    "title2": "Uskunalari bo'yicha",
+    "title3": "eksklyuziv taklifga",
+    "title4": "ega bo'ling",
+    "yellow_text": "Biz sizga maslahat berishdan va uskunani tanlashda yordam berishdan mamnun bo'lamiz",
+    "text": "«Tugmani bosish orqali siz shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz va maxfiylik siyosatiga rozilik bildirasiz»",
+    "button": "Yuborish"
   },
-  "advantages":{
+  "advantages": {
     "blue_fon": {
-      "yellow_title":"BIZNING AVZIYATLARIMIZ",
-      "title":"TRUE FITNESSNING afzalliklari",
-      "text":"Bu bizni fitnes uskunalari bo'yicha jahon yetakchisiga aylantiradi"
+      "yellow_title": "BIZNING AVZIYATLARIMIZ",
+      "title": "TRUE FITNESSNING afzalliklari",
+      "text": "Bu bizni fitnes uskunalari bo'yicha jahon yetakchisiga aylantiradi"
     },
-    "cards":{
-      "card1":{
-        "title":"Eng yaxshi mahsulot kalassda ",
-        "text":"Bizning murabbiylarimiz sinfdagi eng yaxshi ko'rsatkichlarga ega, kuchliroq ishlashdan kengaytirilgan funksionallikka qadar."
-      }
+    "cards": {
+      "title": "Sinfdagi eng yaxshi ko'rsatkich",
+      "text": "Bizning mashinalarimiz kuchli texnik ko'rsatkichlardan tortib ilg'or funksiyalargacha bo'lgan sinfdagi eng ilg'or xususiyatlarga ega",
+      "title2": "Uskunaning yuqori ishonchliligi",
+      "text2": "Simulyatorlarning yuqori sifati TRUE tashrif qog'ozidir. Bundan tashqari, TRUE kardiojarrohlik mashinalariga 5 yilgacha to'liq kafolat beradi.",
+      "title3": "Egalik qilishning arzonligi",
+      "text3": "Trenajyorlar jiddiy operatsion yukga bardosh bera oladi, xizmat ko'rsatish xarajatlarini minimal darajada ushlab turadi, bu esa egalik qilishning minimal narxini ta'minlaydi",
+      "title4": "Yuqori sifatli va tezkor xizmat",
+      "text4": "Uskunalar muammosiz ishlashi kerak, shuning uchun biz barcha kerakli ehtiyot qismlar mavjudligiga va texnik javobning yuqori shoshilinchligiga alohida e'tibor qaratamiz",
+      "title5": "Narxlar hamkasblariga qaraganda pastroq",
+      "text5": "Simulyatorlarning narxi sizni yoqimli ajablantiradi. Garchi biz raqobatchilardan butunlay ustun bo'lsak ham, narxlarimiz pastroq",
+      "title6": "Mukammal ishlash",
+      "text6": "Тренажеры TRUE обеспечивают непревзойденный уровень тренировок, для достижения самых высоких результатов.",
+      "title7": "Innovatsiyalar soni bo'yicha mutlaq rahbarlar",
+      "text7": "Bizning mashinalarimiz kuchli texnik ko'rsatkichlardan tortib ilg'or funksiyalargacha bo'lgan sinfdagi eng ilg'or xususiyatlarga ega",
+      "title8": "Maksimal qulaylik va funksionallik",
+      "text8": "TRUE kompaniyasi barcha texnik nuanslarni ko'rib chiqadi va simulyatorlarni iloji boricha qulay va funktsional qiladi"
     },
-    "title":"TRUE Fitness brendi eng yirik fitnes uskunalari ishlab chiqaruvchi TOP 5 taligiga kiradi"
+    "title": "TRUE Fitness brendi eng yirik fitnes uskunalari ishlab chiqaruvchi TOP 5 taligiga kiradi"
   },
-  "open_club":{
-      "blue_fon":{
-        "title":"TRUE bilan klub oching",
-        "text":"CLUB TRUE"
-      },
-      "form":{
-        "title":"Ariza yuboring",
-        "input_name_title":"Sizning ismingiz",
-        "input_email_title":"Е-mail:",
-        "input_phone_title":"Telefon raqami",
-        "input_city_title":"Shahar",
-        "radio_open_title":"Siz ochmoqchimisiz:",
-        "radio_date_title":"Loyihaning rejalashtirilgan boshlanish sanasi:",
-        "select_title":"Sizni qaysi xizmatlar qiziqtiradi:",
-        "input_file":"FAYLLAR QO'SHISH",
-        "text1":"Qavat rejasi yuklab olish",
-        "comentary":"Izoh",
-        "button":"Yuborish"
-      }
-  },
-  "contact":{
-    "blue_fon":{
-      "yellow_title":"ALOQALAR",
-      "title":"Moskvadagi SHOW ROOM TRUE",
-      "text":"VEGAS SEC Crocus City, Myakinino shahridagi ko'rgazma zalimizga tashrif buyuring"
+  "open_club": {
+    "blue_fon": {
+      "title": "TRUE bilan klub oching",
+      "text": "CLUB TRUE"
     },
-    "map_data":{
-      "title":"Rossiyadagi distribyutor - WELLFITNESS",
-      "number":"+7 (495) 320-5063",
-      "text":"Manzil: Toshkent sh., Bulvar, ko'ch. Furqat 2A",
-      "working_time1:":"Du-Juma, Вс dan 10:00 gacha 23:00",
-      "working_time2:":"Du-Sh dan 10:00 gacha 24:00",
-      "site":"info@wellfitness.pro"
-
+    "form": {
+      "title": "Ariza yuboring",
+      "input_name_title": "Sizning ismingiz",
+      "input_email_title": "Е-mail:",
+      "input_phone_title": "Telefon raqami",
+      "input_city_title": "Shahar",
+      "radio_open_title": "Siz ochmoqchimisiz:",
+      "radio_date_title": "Loyihaning rejalashtirilgan boshlanish sanasi:",
+      "radio_size_title": "Sport zalining umumiy maydoni:",
+      "select_title": "Sizni qaysi xizmatlar qiziqtiradi:",
+      "comentary": "Izoh qoldirish",
+      "button": "Yuborish"
     }
   },
-  "footer":{
-    "catalog":{
-      "name":"MAXSULPTLAR KATALOG ",
-      "kardio":"Kardio jihozlari",
-      "composite":"Kompozit quvvat",
-      "true_stretch":"True Stretch",
-      "cycling":"Velosport",
-      "group_training":"Guruh mashg'ulotlari",
-      "strength":"Kuchni mashq qilish uchun uskunalar",
-      "consol":"Konsollar"
+  "contact": {
+    "blue_fon": {
+      "yellow_title": "ALOQALAR",
+      "title": "TOSHKENTDAGI RUM TRUE SHOUSI",
+      "text": "TOSHKENT SHAHRIDAGI KO'RGAZMA ZALIMIZGA TASHRIF BUYURING, BOULEVARD"
     },
-    "information":{
-      "name":"MA `LUMOT",
-      "brand":"Brend haqida",
-      "advantages":"Afzalliklar",
-      "news":"Yangiliklar",
-      "get_catalog":"Katalogni oling",
-      "open_club":"True bilan klub oching",
-      "project_3d":"3D loyihaga buyurtma berish",
-      "efficient_club":"Samarali klub",
-      "leasing":"Lizing "
-    },
-    "contact":{
-      "name":"ALOQALAR",
-      "contact":"ALOQALAR",
-      "privacy_policy":"Maxfiylik siyosati",
-      "news":"YANGILIKLAR VA AKSIYALARGA OBUNA BO'LING"
+    "map_data": {
+      "title": "O'zbekistondagi rasmiy distribyutor - ProWellness",
+      "text": "Manzil: Toshkent sh., Bulvar, ko'ch. Furqat 2A",
+      "time": "Dushanba-Shanba 09:00-19:00",
+      "time2": "Yakshanba dam olish kuni",
+      "site": "info@wellfitness.pro"
     }
+  },
+  "footer": {
+    "title1": "MAHSULOTLAR KATALOGI",
+    "title2": "Ma'lumot",
+    "title3": "Kontaktlar",
+    "title4": "YANGILIKLAR VA AKTSIYALARGA OBUNA BO'LING",
+    "kontakt1": "Maxfiylik siyosati",
+    "kontakt2": "Kontaktlar"
   }
 }

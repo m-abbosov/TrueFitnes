@@ -33,7 +33,7 @@ export const navbar = [
   },
   {
     id: 3,
-    path: "/Advantages",
+    path: "/advantages",
     name: "Преимущества ",
     hidden: false,
     Element: <AdvantagesPage />,

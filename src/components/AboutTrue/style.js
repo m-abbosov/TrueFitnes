@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/responsive";
 
 export const Wrapper = styled.div`
   height: 784px;
@@ -6,12 +7,17 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 45px;
-  background-color: #EEE;
-`;
-export const IMG = styled.img`
-  width: 585px;
-  height: 624px;
-  object-fit: cover;
+  background-color: #eee;
+
+  @media ${device.maxWidth} {
+    height: auto;
+    padding: 0;
+    gap: 0;
+
+    .about-true {
+      display: none;
+    }
+  }
 `;
 export const Container = styled.div`
   width: 610px;
@@ -20,8 +26,14 @@ export const Container = styled.div`
   padding: 30px 27px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  @media ${device.maxWidth} {
+    width: 100%;
+    height: auto;
+    padding: 16px 18px;
+    gap: 12px;
+  }
 `;
 
 export const H1 = styled.div`
@@ -32,6 +44,11 @@ export const H1 = styled.div`
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
+
+  @media ${device.maxWidth} {
+    line-height: normal;
+    font-size: 20px;
+  }
 `;
 
 export const Span = styled.div`
@@ -39,24 +56,33 @@ export const Span = styled.div`
   height: 5px;
   background: #fff500;
   border-radius: 5px;
+
+  @media ${device.maxWidth} {
+    height: 3.697px;
+    height: 3px;
+    width: 94px;
+  }
 `;
 export const Text = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 35px;
-  display: flex;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
 
   color: #ffffff;
+
+  @media ${device.maxWidth} {
+    font-size: 10px;
+    line-height: normal;
+    line-height: 20px;
+  }
 `;
 
 export const Button = styled.button`
-  width: 300px;
-  height: 63px;
   background: #ffff19;
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -65,12 +91,18 @@ export const Button = styled.button`
   color: #01aee7;
   transition: 0.3s;
   border: none;
-  :hover{
+  padding: 17px 84px;
+  :hover {
     cursor: pointer;
   }
-  :active{
+  :active {
     opacity: 0.8;
     scale: 0.98;
   }
-`;
 
+  @media ${device.maxWidth} {
+    font-size: 10px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+`;
