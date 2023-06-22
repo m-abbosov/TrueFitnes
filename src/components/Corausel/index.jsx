@@ -1,25 +1,33 @@
 import { Wrapper } from "./style";
 import "./style.css";
 
-import CarsImg1 from "../../assets/imgs/carousel/Img1.png";
-import CarsImg2 from "../../assets/imgs/carousel/Img2.png";
-import CarsImg3 from "../../assets/imgs/carousel/Img3.png";
-import CarsImg4 from "../../assets/imgs/carousel/Img4.png";
-import CarsImg5 from "../../assets/imgs/carousel/Img5.png";
-import CarsImg6 from "../../assets/imgs/carousel/Img6.png";
-import CarsImg7 from "../../assets/imgs/carousel/Img7.png";
-import CarsImg8 from "../../assets/imgs/carousel/Img8.png";
+import CarsImg1 from "../../assets/imgs/carousel/Img1.PNG";
+import CarsImg2 from "../../assets/imgs/carousel/Img2.PNG";
+import CarsImg3 from "../../assets/imgs/carousel/Img3.PNG";
+import CarsImg4 from "../../assets/imgs/carousel/Img4.PNG";
 
 function Carousel() {
   const data = [
-    CarsImg1,
-    CarsImg2,
-    CarsImg3,
-    CarsImg4,
-    CarsImg5,
-    CarsImg6,
-    CarsImg7,
-    CarsImg8,
+    {
+      id: Math.random(),
+      img: CarsImg1,
+      title: "КАРДИО ТРЕНАЖЕРЫ",
+    },
+    {
+      id: Math.random(),
+      img: CarsImg2,
+      title: "СИЛОВЫЕ ТРЕНАЖЕРЫ",
+    },
+    {
+      id: Math.random(),
+      img: CarsImg3,
+      title: "ФУНКЦИОНАЛЬНОЙ ТРЕНАЖЕРЫ",
+    },
+    {
+      id: Math.random(),
+      img: CarsImg4,
+      title: "ГРУППОВЫЕ ТРЕНАЖЕРЫ",
+    },
   ];
 
   return (
@@ -66,8 +74,7 @@ function Carousel() {
                     </div>
                     <div className="bottom-text-wrapper">
                       <h2 className="bottomText">
-                        КАРдио <br />
-                        тренажеры
+                        {item.title}
                       </h2>
                       <svg
                         width="147"
@@ -84,7 +91,7 @@ function Carousel() {
                     </div>
                   </div>
                   <div className="home-carousel-wrapper-div-img">
-                    <img src={item} alt="" />
+                    <img src={item.img} className="w-100" alt="" />
                   </div>
                 </div>
               </div>

@@ -17,10 +17,9 @@ function HomeForm() {
       e.target[3].value
         .split(" ")
         .filter((_, i) => i !== 0)
-        .join("")
-        .trim() === ""
+        .join("").length < 9
     ) {
-      toast.error("Где-то ошибка");
+      toast.error("Номер неправильный!");
       return;
     }
 
@@ -34,6 +33,12 @@ function HomeForm() {
         .filter((_, i) => i !== 0)
         .join("")
     );
+    formData.append("city", null);
+    formData.append("want", null);
+    formData.append("term", null);
+    formData.append("size", null);
+    formData.append("interested", null);
+    formData.append("comments", null);
 
     fetch(" https://sheetdb.io/api/v1/fl9x6zmo27z3l", {
       method: "POST",
@@ -47,6 +52,8 @@ function HomeForm() {
           isLoading: false,
           autoClose: 2000,
         });
+        e.target.reset();
+        setPhone("")
       })
       .catch((err) =>
         toast.update(id, {
@@ -63,8 +70,16 @@ function HomeForm() {
       <Card onSubmit={handleSubmit}>
         <Title> {t("home.home_form.title")} </Title>
         <P> {t("home.home_form.text_1")} </P>
-        <Input type="text" required placeholder={t("input_placeholder.input_name")} />
-        <Input type="email" required placeholder={t("input_placeholder.input_email")} />
+        <Input
+          type="text"
+          required
+          placeholder={t("input_placeholder.input_name")}
+        />
+        <Input
+          type="email"
+          required
+          placeholder={t("input_placeholder.input_email")}
+        />
         <PhoneInput
           defaultCountry="uz"
           value={phone}

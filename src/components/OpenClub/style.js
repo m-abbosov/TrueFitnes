@@ -27,17 +27,8 @@ export const TitleContainer = styled.div`
   align-items: center;
 `;
 
-export const Img = styled.img`
-  display: block;
-  width: 1350px;
-  height: 900px;
-  margin: auto;
-  padding: 77px 0;
-`;
-
 export const FormContainer = styled.div`
   width: 100%;
-  height: 1547px;
   background: #eee;
   padding: 65px 0;
 `;

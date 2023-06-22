@@ -20,10 +20,9 @@ function Club() {
       e.target[3].value
         .split(" ")
         .filter((_, i) => i !== 0)
-        .join("")
-        .trim() === ""
+        .join("").length < 9
     ) {
-      toast.error("Где-то ошибка");
+      toast.error("Номер неправильный!");
       return;
     }
 
@@ -37,6 +36,12 @@ function Club() {
         .filter((_, i) => i !== 0)
         .join("")
     );
+    formData.append("city", null);
+    formData.append("want", null);
+    formData.append("term", null);
+    formData.append("size", null);
+    formData.append("interested", null);
+    formData.append("comments", null);
 
     fetch(" https://sheetdb.io/api/v1/fl9x6zmo27z3l", {
       method: "POST",
@@ -50,6 +55,8 @@ function Club() {
           isLoading: false,
           autoClose: 2000,
         });
+        e.target.reset();
+        setPhone("");
       })
       .catch((err) =>
         toast.update(id, {
