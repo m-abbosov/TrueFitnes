@@ -1,5 +1,6 @@
 import {
   Button,
+  Div,
   Facebook,
   FooterDiv,
   Icons,
@@ -57,8 +58,8 @@ function Footer() {
 
   return (
     <Wrapper>
-      <FooterDiv>
-        <p className="titleText">КАТАЛОГ ТОВАРОВ</p>
+      <FooterDiv height={'280px'} mobile={true}  >
+        <b className="titleText">КАТАЛОГ ТОВАРОВ</b>
         <Texts>
           {catalog.map((item) => (
             <P onClick={() => window.open(item.link, "__blank")} key={item.id}>
@@ -68,37 +69,39 @@ function Footer() {
           <h6>© TRUE FITNESS</h6>
         </Texts>
       </FooterDiv>
-      <FooterDiv>
-        <b className="titleText">ИНФОРМАЦИЯ</b>
-        <Texts>
-          {navbar
-            .filter((_, i) => i !== 0)
-            .map((item) => {
-              return (
-                <P
-                  onClick={() =>
-                    item.path === null
-                      ? window.open("https://prowellness.uz/", "__blank")
-                      : navigate(`${item.path}`)
-                  }
-                  key={Math.random()}
-                >
-                  {item.name}{" "}
-                </P>
-              );
-            })}
-        </Texts>
-      </FooterDiv>
-      <FooterDiv>
-        <b className="titleText">КОНТАКТЫ</b>
-        <Texts>
-          <P onClick={() => navigate("/contact")}>
-            Политика конфиденциальности{" "}
-          </P>
-          <P onClick={() => navigate("/contact")}>Контакты </P>
-        </Texts>
-      </FooterDiv>
-      <FooterDiv>
+      <Div height={"280px"} >
+        <FooterDiv>
+          <b className="titleText">ИНФОРМАЦИЯ</b>
+          <Texts>
+            {navbar
+              .filter((_, i) => i !== 0)
+              .map((item) => {
+                return (
+                  <P
+                    onClick={() =>
+                      item.path === null
+                        ? window.open("https://prowellness.uz/", "__blank")
+                        : navigate(`${item.path}`)
+                    }
+                    key={Math.random()}
+                  >
+                    {item.name}
+                  </P>
+                );
+              })}
+          </Texts>
+        </FooterDiv>
+        <FooterDiv>
+          <b className="titleText">КОНТАКТЫ</b>
+          <Texts>
+            <P onClick={() => navigate("/contact")}>
+              Политика конфиденциальности{" "}
+            </P>
+            <P onClick={() => navigate("/contact")}>Контакты </P>
+          </Texts>
+        </FooterDiv>
+      </Div>
+      <FooterDiv mobile={true} >
         <b className="titleText">ПОДПИСАТЬСЯ НА НОВОСТИ И АКЦИИ</b>
         <SentEmail>
           <Input placeholder="E - MAIL" />

@@ -3,29 +3,56 @@ import { ReactComponent as send } from "../../assets/icons/send.svg";
 import { ReactComponent as ins } from "../../assets/icons/instagram.svg";
 import { ReactComponent as youtube } from "../../assets/icons/bi_youtube.svg";
 import { ReactComponent as facebook } from "../../assets/icons/ri_facebook-fill.svg";
+import { device } from "./../../utils/responsive";
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  gap: 60px;
+
   background-color: #01aee7;
-  padding: 44px 100px;
+  
   color: #ffffff;
   width: 100%;
+
+  @media ${device.mobile} {
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-around;
+    height: 900px;
+  }
+  @media ${device.dectop} {
+    gap: 60px;
+    padding: 44px 100px;
+  }
+  
 `;
 export const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  max-width: 23%;
+  /* max-width: 23%; */
+  @media ${device.mobile} {
+    gap: 5px;
+    max-width: ${({mobile})=>mobile?'90%':'145px'};
+    max-height: ${({height})=>height?height:"fit-content"};
+  }
+  @media ${device.dectop} {
+    gap: 28px;
+    max-width: 23%;
+    max-height: fit-content;
+  }
 `;
 export const Texts = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
 
   .titleText {
     font-weight: 600;
+  }
+  @media ${device.mobile} {
+    gap: 5px;
+  }
+  @media ${device.dectop} {
+   gap: 16px;
   }
 `;
 
@@ -40,7 +67,16 @@ export const P = styled.a`
   color: #ffffff;
   cursor: pointer;
   transition: 500ms;
-  
+
+  @media ${device.mobile} {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  @media ${device.dectop} {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
   &:hover {
     cursor: pointer;
     border-bottom: 0.5px solid white;
@@ -110,4 +146,20 @@ export const Youtube = styled(youtube)`
   width: 26px;
   height: 26px;
   cursor: pointer;
+`;
+
+export const Div = styled.div`
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-height: ${({height})=>height?height:"fit-content"};
+
+  }
+  @media ${device.dectop} {
+    display: flex;
+    column-gap: 126px;
+    max-height: fit-content;
+    flex-direction: row;
+  }
 `;
