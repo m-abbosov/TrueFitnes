@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {
   Logo,
   Wrapper,
@@ -6,6 +7,7 @@ import {
   Button,
   Links,
   Link,
+  Menu,
 } from "./style";
 import logo from "../../assets/imgs/logo.png";
 import { navbar } from "../../utils/navbar";
@@ -43,22 +45,91 @@ const Navbar = () => {
   return (
     <Wrapper>
       <WrapperLogo>
-        <div></div>
+        <Menu>
+          <a
+            className="btn"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              className="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </a>
+          <div
+            className="offcanvas offcanvas-start"
+            tabIndex="-1"
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+          >
+            <div className="offcanvas-header">
+              <Logo onClick={() => navigate("/")} src={logo} />
+              <button
+                type="button"
+                className="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="offcanvas-body">
+              <div className="text-center">
+                <Links mobile={true}>
+                  {navbar.map(({ name, path, id, hidden }, index) => {
+                    return (
+                      <Link
+                        className="navbarText fw-bold"
+                        onClick={() =>
+                          path === null
+                            ? window.open("https://prowellness.uz/", "__blank")
+                            : navigate(`${path}`)
+                        }
+                        key={id}
+                      >
+                        {currentLenguageCode === "uz"
+                          ? uzb[index]
+                          : !hidden
+                          ? name
+                          : null}
+                      </Link>
+                    );
+                  })}
+                </Links>
+                <LinkR
+                  className="text-decoration-none text-dark fw-bold"
+                  to="tel:+998906066666"
+                >
+                  +998 (90)-606-66-66
+                </LinkR>
+              </div>
+            </div>
+          </div>
+        </Menu>
         <Logo onClick={() => navigate("/")} src={logo} />
         <Contact>
           <div className="d-flex w-100 justify-content-between align-items-center">
-            <div className="dropdown  ">
+            <div className="dropdown ">
               <p
-                className="btn  dropdown-togglem m-0 fw-bold"
+                className="btn d-flex gap-1 align-items-center dropdown-togglem m-0 fw-bold"
                 href="#"
                 role="button"
                 id="dropdownMenuLink"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                {t("lenguage")}
+                 {<span className={`fi fi-${currentLenguageCode}`}></span>} 
+                  {t("lenguage")}
               </p>
-
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 {lenguage.map(({ code, name, flag }) => {
                   return (
@@ -81,13 +152,13 @@ const Navbar = () => {
               </ul>
             </div>
             <LinkR
-              className="text-decoration-none text-dark fw-bold"
+              className="displayNone text-decoration-none text-dark fw-bold"
               to="tel:+998906066666"
             >
               +998 (90)-606-66-66
             </LinkR>
           </div>
-          <Button>
+          <Button className="displayNone">
             <a
               href="#club-3d"
               className="navbarText text-decoration-none text-light"
@@ -97,7 +168,7 @@ const Navbar = () => {
           </Button>
         </Contact>
       </WrapperLogo>
-      <Links>
+      <Links mobile={!true}>
         {navbar.map(({ name, path, id, hidden }, index) => {
           return (
             <Link

@@ -12,3 +12,16 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+.displayNone {
+  display: block;
+}
+@media only screen and (max-width: 500px) {
+  .displayNone {
+    display: none;
+  }
+}
+.offcanvas-body {
+  display: flex !important;
+  justify-content: center !important;
+}
