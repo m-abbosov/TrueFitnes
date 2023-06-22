@@ -341,7 +341,7 @@ function OpenClub() {
           </Label>
           <FormTitle>Комментарий</FormTitle>
           <Input maxLength="200" height={"103px"} />
-          <Button type="submit">Oтпрвить</Button>
+          <Button type="submit">ОТПРАВИТЬ</Button>
         </Form>
       </FormContainer>
       <ToastContainer />

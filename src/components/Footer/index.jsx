@@ -45,7 +45,7 @@ function Footer() {
     },
     {
       id: Math.random(),
-      link: "https://prowellness.uz/categories/nagruzhaemye_diskami",
+      link: "https://prowellness.uz/categories/trenazhery_so_stekami",
       title: "Силовые тренажеры",
     },
     {
