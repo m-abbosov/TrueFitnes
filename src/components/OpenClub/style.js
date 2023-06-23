@@ -72,7 +72,7 @@ export const FormContainer = styled.div`
 export const Title = styled.div`
   font-style: normal;
   font-weight: 700;
-  font-size: ${({ size }) => size || "40px"};
+  font-size: ${({ size }) => (size === "lg" ? "40px" : "40px")};
   line-height: 48px;
   text-transform: uppercase;
   color: #ffffff;

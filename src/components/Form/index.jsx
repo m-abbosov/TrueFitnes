@@ -48,7 +48,7 @@ function Form() {
       .then((res) => res.json())
       .then((html) => {
         toast.update(id, {
-          render: "Добавлено успешно!",
+          render: "«ОТПРАВЛЕНО успешно!»",
           type: "success",
           isLoading: false,
           autoClose: 2000,
@@ -69,19 +69,24 @@ function Form() {
     <Wrapper id="club-3d">
       <ImgDiv>
         <Back>
-          <ClubText size="lg">TRUE FITNESS</ClubText>
-          <Title size="lg">
+          <ClubText size="lg">
+            TRUE FITNESS
+          </ClubText>
+          <Title size="lg" data-aos="fade-up">
             {t("form.title")}{" "}
             <span style={{ color: "#01AEE7" }}>{t("form.title2")}</span>{" "}
-            {t("form.title3")}{ " "}
+            {t("form.title3")}{" "}
             <span style={{ color: "#01AEE7" }}>{t("form.title4")}</span>
           </Title>
-          <ClubText size="lg">{t("form.yellow_text")}</ClubText>
+          <ClubText data-aos="fade-up" t size="lg">
+            {t("form.yellow_text")}
+          </ClubText>
           <Formm onSubmit={handleSubmit}>
             <Input
               type="text"
               required
               placeholder={t("input_placeholder.input_name")}
+              data-aos="fade-up"
             />
             <PhoneInput
               defaultCountry="uz"
@@ -90,15 +95,17 @@ function Form() {
               placeholder="+998 (99)-999-99-99"
               name="data[phone]"
               hideDropdown={true}
+              data-aos="fade-up"
             />
             <Input
               type="email"
               required
               placeholder={t("input_placeholder.input_email")}
+              data-aos="fade-up"
             />
-            <ButtonForm>{t("form.button")}</ButtonForm>
+            <ButtonForm data-aos="fade-up">{t("form.button")}</ButtonForm>
           </Formm>
-          <H6>{t("form.text")}</H6>
+          <H6 data-aos="fade-right">{t("form.text")}</H6>
         </Back>
       </ImgDiv>
       <ToastContainer />

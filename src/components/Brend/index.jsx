@@ -178,26 +178,32 @@ function Brand() {
   return (
     <Wrapper>
       <TitleContainer height="225px">
-        <ClubText>{t("brend.blue_fon.text")}</ClubText>
-        <Title>{t("brend.blue_fon.title1")}</Title>
-        <Title> {t("brend.blue_fon.title2")}</Title>
+        <ClubText data-aos="fade-up">{t("brend.blue_fon.text")}</ClubText>
+        <Title data-aos="fade-right">{t("brend.blue_fon.title1")}</Title>
+        <Title data-aos="fade-left"> {t("brend.blue_fon.title2")}</Title>
       </TitleContainer>
       <About>
         <Card>
-          <Text>{t("brend.about.text1")} </Text>
-          <Text color="black">{t("brend.about.text2")} </Text>
-          <Text color="black">{t("brend.about.text3")}</Text>
-          <Text>{t("brend.about.text4")}</Text>
+          <Text data-aos="fade-up">{t("brend.about.text1")} </Text>
+          <Text data-aos="fade-up" color="black">
+            {t("brend.about.text2")}{" "}
+          </Text>
+          <Text data-aos="fade-up" color="black">
+            {t("brend.about.text3")}
+          </Text>
+          <Text data-aos="fade-up">{t("brend.about.text4")}</Text>
         </Card>
       </About>
       <AboutContainer>
         <AboutTrue img={about} button={false} mobile={"yes"} />
         <History>
-          <H1>{t("brend.about_container.title1")}</H1>
-          <H1 color="black">{t("brend.about_container.title2")}</H1>
-          <Line />
-          <P>{t("brend.about_container.text1")}</P>
-          <P>{t("brend.about_container.text2")}</P>
+          <H1 data-aos="fade-up">{t("brend.about_container.title1")}</H1>
+          <H1 data-aos="fade-left" color="black">
+            {t("brend.about_container.title2")}
+          </H1>
+          <Line data-aos="fade-right" />
+          <P data-aos="fade-up">{t("brend.about_container.text1")}</P>
+          <P data-aos="fade-up">{t("brend.about_container.text2")}</P>
         </History>
         <Years>
           {years.map((year, i) => {
@@ -206,6 +212,7 @@ function Brand() {
                 onClick={() => setActive(i)}
                 key={year.id}
                 className={i === active ? "year active" : "year"}
+                data-aos="fade-up"
               >
                 <span></span>
                 <b>{year.year}</b>
@@ -250,14 +257,15 @@ function Brand() {
             effect="blur"
             src={years[active].img}
             className="year-img"
+            data-aos="fade-right"
           />
           <TrueSports>
-            <H1 mobile="yes">
+            <H1 data-aos="fade-left" mobile="yes">
               {currentLenguageCode === "uz"
                 ? years[active].titleUz
                 : years[active].title}
             </H1>
-            <P>
+            <P data-aos="fade-left">
               {currentLenguageCode === "uz"
                 ? years[active].textUz
                 : years[active].text}
@@ -266,29 +274,31 @@ function Brand() {
         </ImgDiv>
       </AboutContainer>
       <Innovations>
-        <InnovationsTitle>{t("brend.innovations.title")}</InnovationsTitle>
+        <InnovationsTitle data-aos="fade-up">
+          {t("brend.innovations.title")}
+        </InnovationsTitle>
         <Cards>
-          <InnovationsCard>
+          <InnovationsCard data-aos="flip-up">
             <LazyLoadImage alt="main" effect="blur" src={imgCard1} />
             <CardText>{t("brend.innovations.img_title1")}</CardText>
           </InnovationsCard>
-          <InnovationsCard>
+          <InnovationsCard data-aos="flip-up">
             <LazyLoadImage alt="main" effect="blur" src={imgCard2} />
             <CardText>{t("brend.innovations.img_title2")}</CardText>
           </InnovationsCard>
-          <InnovationsCard>
+          <InnovationsCard data-aos="flip-up">
             <LazyLoadImage alt="main" effect="blur" src={imgCard3} />
             <CardText>{t("brend.innovations.img_title3")}</CardText>
           </InnovationsCard>
-          <InnovationsCard>
+          <InnovationsCard data-aos="flip-up">
             <LazyLoadImage alt="main" effect="blur" src={imgCard4} />
             <CardText>{t("brend.innovations.img_title4")}</CardText>
           </InnovationsCard>
-          <InnovationsCard>
+          <InnovationsCard data-aos="flip-up">
             <LazyLoadImage alt="main" effect="blur" src={imgCard5} />
             <CardText>{t("brend.innovations.img_title5")}</CardText>
           </InnovationsCard>
-          <InnovationsCard>
+          <InnovationsCard data-aos="flip-up">
             <LazyLoadImage alt="main" effect="blur" src={imgCard6} />
             <CardText>{t("brend.innovations.img_title6")}</CardText>
           </InnovationsCard>

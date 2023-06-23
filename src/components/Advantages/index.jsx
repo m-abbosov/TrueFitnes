@@ -72,13 +72,17 @@ function Advantages() {
   return (
     <Wrapper>
       <TitleContainer height="315px">
-        <ClubText>{t("advantages.blue_fon.yellow_title")}</ClubText>
-        <Title>{t("advantages.blue_fon.title")}</Title>
-        <P className="m-0 mt-5">{t("advantages.blue_fon.text")} </P>
+        <ClubText data-aos="fade-up">
+          {t("advantages.blue_fon.yellow_title")}
+        </ClubText>
+        <Title data-aos="fade-up">{t("advantages.blue_fon.title")}</Title>
+        <P data-aos="fade-up" className="m-0 mt-5">
+          {t("advantages.blue_fon.text")}{" "}
+        </P>
       </TitleContainer>
       <Cards>
         {data.map((card) => (
-          <Card key={card.id}>
+          <Card data-aos="flip-up" key={card.id}>
             <Img src={card.img} />
             <H1>{card.title} </H1>
             <Text>{card.text}</Text>
@@ -149,7 +153,7 @@ function Advantages() {
       </Cards.Carousel>
       <Box>
         <Button className="top-btn">TOP 5</Button>
-        <Titlee>{t("advantages.title")} </Titlee>
+        <Titlee data-aos="fade-up">{t("advantages.title")} </Titlee>
       </Box>
       <Form />
     </Wrapper>

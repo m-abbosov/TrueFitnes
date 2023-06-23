@@ -21,18 +21,18 @@ export const Logo = styled.img`
 export const WrapperLogo = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 24px 0 14px 0;
+  border-bottom: 1px solid black;
+  width: 90%;
 
-  @media ${device.mobile} {
-    border: none;
-    align-items: center;
-    padding: 10px 17px;
-    width: 100%;
+  .mobile {
+    width: 200px;
   }
-  @media ${device.dectop} {
-    padding: 24px 0 14px 0;
-    border-bottom: 1px solid black;
-    width: 90%;
-    max-width: 1440px ;
+
+  @media ${device.maxWidth} {
+    .mobile {
+      display: none;
+    }
   }
 `;
 export const Contact = styled.div`
@@ -77,14 +77,14 @@ export const Links = styled.div`
   justify-content: center;
   width: 100%;
   @media ${device.mobile} {
-    display: ${({ mobile }) => mobile? "flex": "none"};
+    display: ${({ mobile }) => (mobile ? "flex" : "none")};
     flex-direction: column;
     gap: 30px;
   }
   @media ${device.dectop} {
     flex-direction: row;
     gap: 120px;
-    display: ${({ mobile }) => mobile? "none": "flex"};
+    display: ${({ mobile }) => (mobile ? "none" : "flex")};
   }
 `;
 export const Link = styled.div`

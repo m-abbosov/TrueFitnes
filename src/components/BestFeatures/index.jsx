@@ -8,24 +8,24 @@ function BestFeatures() {
   return (
     <Wrapper>
       <Container>
-        <ImgDiv img={img} >
+        <ImgDiv img={img} data-aos="fade-right">
           <Title>{t("home.best_features.img_title_1")}</Title>
           <Span></Span>
           <P>{t("home.best_features.img_text_1")}</P>
         </ImgDiv>
-        <Div>
+        <Div data-aos="fade-right">
           <Title>{t("home.best_features.bg_title_1")}</Title>
           <Span></Span>
           <P>{t("home.best_features.bg_text_1")} </P>
         </Div>
       </Container>
       <Container>
-        <Div>
+        <Div data-aos="fade-left">
           <Title>{t("home.best_features.bg_title_2")}</Title>
           <Span></Span>
           <P>{t("home.best_features.bg_text_2")} </P>
         </Div>
-        <ImgDiv  img={img2}>
+        <ImgDiv data-aos="fade-left" img={img2}>
           <Title>{t("home.best_features.img_title_2")}</Title>
           <Span></Span>
           <P>{t("home.best_features.img_text_2")} </P>

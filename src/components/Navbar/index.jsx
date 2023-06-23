@@ -45,6 +45,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <WrapperLogo>
+        <div className="mobile"></div>
         <Menu>
           <a
             className="btn"

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function AboutTrue({ img, button }) {
   const { t } = useTranslation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Wrapper>
@@ -14,13 +14,14 @@ function AboutTrue({ img, button }) {
         effect="blur"
         src={img}
         className="about-true"
+        data-aos="zoom-in-right"
       />
-      <Container>
-        <H1>{t("home.aboutTrue.title")}</H1>
-        <Span></Span>
-        <Text>{t("home.aboutTrue.text")} </Text>
+      <Container data-aos="zoom-in-left">
+        <H1 data-aos="fade-up">{t("home.aboutTrue.title")}</H1>
+        <Span data-aos="fade-up"></Span>
+        <Text data-aos="flip-up">{t("home.aboutTrue.text")} </Text>
         {button ? (
-          <Button onClick={() => navigate("/brend")}>
+          <Button data-aos="fade-down" onClick={() => navigate("/brend")}>
             {t("home.aboutTrue.button")}
           </Button>
         ) : null}

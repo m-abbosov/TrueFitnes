@@ -47,13 +47,13 @@ function HomeForm() {
       .then((res) => res.json())
       .then((html) => {
         toast.update(id, {
-          render: "Добавлено успешно!",
+          render: "«ОТПРАВЛЕНО успешно!»",
           type: "success",
           isLoading: false,
           autoClose: 2000,
         });
         e.target.reset();
-        setPhone("")
+        setPhone("");
       })
       .catch((err) =>
         toast.update(id, {
@@ -67,18 +67,20 @@ function HomeForm() {
 
   return (
     <Wrapper>
-      <Card onSubmit={handleSubmit}>
-        <Title> {t("home.home_form.title")} </Title>
-        <P> {t("home.home_form.text_1")} </P>
+      <Card onSubmit={handleSubmit} data-aos="zoom-in">
+        <Title data-aos="fade-up"> {t("home.home_form.title")} </Title>
+        <P data-aos="fade-up"> {t("home.home_form.text_1")} </P>
         <Input
           type="text"
           required
           placeholder={t("input_placeholder.input_name")}
+          data-aos="fade-up"
         />
         <Input
           type="email"
           required
           placeholder={t("input_placeholder.input_email")}
+          data-aos="fade-up"
         />
         <PhoneInput
           defaultCountry="uz"
@@ -87,9 +89,13 @@ function HomeForm() {
           placeholder="+998 (99)-999-99-99"
           name="data[phone]"
           hideDropdown={true}
+          data-aos="fade-up"
         />
-        <Button type="submit"> {t("home.home_form.button")}</Button>
-        <P> {t("home.home_form.text")} </P>
+        <Button data-aos="fade-up" type="submit">
+          {" "}
+          {t("home.home_form.button")}
+        </Button>
+        <P data-aos="fade-up"> {t("home.home_form.text")} </P>
         <ToastContainer />
       </Card>
     </Wrapper>

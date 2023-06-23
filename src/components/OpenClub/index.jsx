@@ -65,7 +65,7 @@ function OpenClub() {
       .then((res) => res.json())
       .then((html) => {
         toast.update(id, {
-          render: "Добавлено успешно!",
+          render: "«ОТПРАВЛЕНО успешно!»",
           type: "success",
           isLoading: false,
           autoClose: 2000,
@@ -103,26 +103,36 @@ function OpenClub() {
   return (
     <Wrapper>
       <TitleContainer>
-        <ClubText>{t("open_club.blue_fon.text")}</ClubText>
-        <Title>{t("open_club.blue_fon.title")}</Title>
+        <ClubText data-aos="fade-up">{t("open_club.blue_fon.text")}</ClubText>
+        <Title data-aos="fade-up">{t("open_club.blue_fon.title")}</Title>
       </TitleContainer>
-      <img alt="" className="openclub-img" src={img} />
+      <img data-aos="zoom-in" alt="" className="openclub-img" src={img} />
       <FormContainer>
         <Form onSubmit={handleSubmit}>
-          <FormTitle size="30px">{t("open_club.form.title")}</FormTitle>
-          <FormTitle>{t("open_club.form.input_name_title")}</FormTitle>
+          <FormTitle data-aos="fade-up" size="30px">
+            {t("open_club.form.title")}
+          </FormTitle>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.input_name_title")}
+          </FormTitle>
           <Input
+            data-aos="fade-up"
             type="text"
             required
             placeholder={t("open_club.form.input_name_title")}
           />
-          <FormTitle>{t("open_club.form.input_email_title")}</FormTitle>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.input_email_title")}
+          </FormTitle>
           <Input
+            data-aos="fade-up"
             type="email"
             required
             placeholder={t("open_club.form.input_email_title")}
           />
-          <FormTitle>{t("open_club.form.input_phone_title")}</FormTitle>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.input_phone_title")}
+          </FormTitle>
           <PhoneInput
             defaultCountry="uz"
             value={phone}
@@ -130,15 +140,21 @@ function OpenClub() {
             placeholder="+998 (99)-999-99-99"
             name="data[phone]"
             hideDropdown={true}
+            data-aos="fade-up"
           />
-          <FormTitle>{t("open_club.form.input_city_title")}</FormTitle>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.input_city_title")}
+          </FormTitle>
           <Input
+            data-aos="fade-up"
             placeholder={t("open_club.form.input_city_title")}
             type="text"
             required
           />
-          <FormTitle>{t("open_club.form.radio_open_title")}</FormTitle>
-          <Label>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.radio_open_title")}
+          </FormTitle>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="open"
@@ -146,9 +162,11 @@ function OpenClub() {
               value="Фитнес клуб"
               onChange={handleOpen}
             />
-            <FormText htmlFor="fitness-club">Фитнес клуб</FormText>
+            <FormText htmlFor="fitness-club">
+              {t("open_club.form.open_text-1")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="open"
@@ -156,9 +174,11 @@ function OpenClub() {
               value="Фитнес студия"
               onChange={handleOpen}
             />
-            <FormText htmlFor="fitness-studio">Фитнес студия</FormText>
+            <FormText htmlFor="fitness-studio">
+              {t("open_club.form.open_text-2")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="open"
@@ -166,9 +186,11 @@ function OpenClub() {
               value="Корпоративный спортзал"
               onChange={handleOpen}
             />
-            <FormText htmlFor="corpo-sport">Корпоративный спортзал</FormText>
+            <FormText htmlFor="corpo-sport">
+              {t("open_club.form.open_text-3")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="open"
@@ -177,10 +199,10 @@ function OpenClub() {
               onChange={handleOpen}
             />
             <FormText htmlFor="stanatory">
-              Тренажерный зал в отеле, санатории
+              {t("open_club.form.open_text-4")}
             </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               id="home-sport"
               onChange={handleOpen}
@@ -188,10 +210,14 @@ function OpenClub() {
               name="open"
               value="Домашний спортзал"
             />
-            <FormText htmlFor="home-sport">Домашний спортзал</FormText>
+            <FormText htmlFor="home-sport">
+              {t("open_club.form.open_text-5")}
+            </FormText>
           </Label>
-          <FormTitle>{t("open_club.form.radio_date_title")}</FormTitle>
-          <Label>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.radio_date_title")}
+          </FormTitle>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="time"
@@ -199,9 +225,11 @@ function OpenClub() {
               value="Срочно"
               onChange={handleTime}
             />
-            <FormText htmlFor="fast">Срочно</FormText>
+            <FormText htmlFor="fast">
+              {t("open_club.form.date_text-1")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="time"
@@ -209,9 +237,11 @@ function OpenClub() {
               value="до 1 месяца"
               onChange={handleTime}
             />
-            <FormText htmlFor="month-1">до 1 месяца</FormText>
+            <FormText htmlFor="month-1">
+              {t("open_club.form.date_text-2")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="time"
@@ -219,9 +249,11 @@ function OpenClub() {
               value="до 3 месяцев"
               onChange={handleTime}
             />
-            <FormText htmlFor="month-3">до 3 месяцев</FormText>
+            <FormText htmlFor="month-3">
+              {t("open_club.form.date_text-3")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="time"
@@ -229,9 +261,11 @@ function OpenClub() {
               value="до 6 месяцев"
               onChange={handleTime}
             />
-            <FormText htmlFor="month-6">до 6 месяцев</FormText>
+            <FormText htmlFor="month-6">
+              {t("open_club.form.date_text-4")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="time"
@@ -239,9 +273,11 @@ function OpenClub() {
               value="до 12 месяцев"
               onChange={handleTime}
             />
-            <FormText htmlFor="month-12">до 12 месяцев</FormText>
+            <FormText htmlFor="month-12">
+              {t("open_club.form.date_text-5")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="time"
@@ -249,11 +285,13 @@ function OpenClub() {
               value="более 12 месяцев"
               onChange={handleTime}
             />
-            <FormText htmlFor="month-12p">более 12 месяцев</FormText>
+            <FormText htmlFor="month-12p">
+              {t("open_club.form.date_text-6")}
+            </FormText>
           </Label>
 
           <FormTitle>{t("open_club.form.radio_size_title")}</FormTitle>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -261,9 +299,11 @@ function OpenClub() {
               value="до 100 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-100">до 100 м2</FormText>
+            <FormText htmlFor="from-100">
+              {t("open_club.form.size_text-1")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -271,9 +311,11 @@ function OpenClub() {
               value="100 - 200 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-200">100 - 200 м2</FormText>
+            <FormText htmlFor="from-200">
+              {t("open_club.form.size_text-2")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -281,9 +323,11 @@ function OpenClub() {
               value="200 - 400 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-400">200 - 400 м2</FormText>
+            <FormText htmlFor="from-400">
+              {t("open_club.form.size_text-3")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -291,9 +335,11 @@ function OpenClub() {
               value="400 - 700 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-700">400 - 700 м2</FormText>
+            <FormText htmlFor="from-700">
+              {t("open_club.form.size_text-4")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -301,9 +347,11 @@ function OpenClub() {
               value="700 - 1000 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-1000">700 - 1000 м2</FormText>
+            <FormText htmlFor="from-1000">
+              {t("open_club.form.size_text-5")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -311,9 +359,11 @@ function OpenClub() {
               value="1000 - 1500 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-1500">1000 - 1500 м2</FormText>
+            <FormText htmlFor="from-1500">
+              {t("open_club.form.size_text-6")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="radio"
               name="size"
@@ -321,29 +371,37 @@ function OpenClub() {
               value="Более 1500 м2"
               onChange={handleSize}
             />
-            <FormText htmlFor="from-1500p">Более 1500 м2</FormText>
+            <FormText htmlFor="from-1500p">
+              {t("open_club.form.size_text-7")}
+            </FormText>
           </Label>
 
-          <FormTitle>{t("open_club.form.select_title")}</FormTitle>
-          <Label>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.select_title")}
+          </FormTitle>
+          <Label data-aos="fade-up">
             <input
               type="checkbox"
               id="consult"
               value="Консультация"
               onChange={handleInterest}
             />
-            <FormText htmlFor="consult">Консультация</FormText>
+            <FormText htmlFor="consult">
+              {t("open_club.form.select_text-1")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="checkbox"
               id="selection"
               value="Подбор оборудования"
               onChange={handleInterest}
             />
-            <FormText htmlFor="selection">Подбор оборудования</FormText>
+            <FormText htmlFor="selection">
+              {t("open_club.form.select_text-2")}
+            </FormText>
           </Label>
-          <Label>
+          <Label data-aos="fade-up">
             <input
               type="checkbox"
               id="simulators"
@@ -351,12 +409,16 @@ function OpenClub() {
               onChange={handleInterest}
             />
             <FormText htmlFor="simulators">
-              Расстановка тренажеров на плане
+              {t("open_club.form.select_text-3")}
             </FormText>
           </Label>
-          <FormTitle>{t("open_club.form.comentary")}</FormTitle>
-          <Input maxLength="200" height={"103px"} />
-          <Button type="submit">{t("open_club.form.button")}</Button>
+          <FormTitle data-aos="fade-up">
+            {t("open_club.form.comentary")}
+          </FormTitle>
+          <Input data-aos="fade-up" maxLength="200" height={"103px"} />
+          <Button data-aos="fade-up" type="submit">
+            {t("open_club.form.button")}
+          </Button>
         </Form>
       </FormContainer>
       <ToastContainer />

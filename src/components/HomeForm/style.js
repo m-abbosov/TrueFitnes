@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import img from "../../assets/imgs/homeForm.png";
-import { device } from '../../utils/responsive';
+import { device } from "../../utils/responsive";
 
 export const Wrapper = styled.div`
   background-image: url(${img});
@@ -62,6 +62,8 @@ export const Card = styled.form`
   @media ${device.maxWidth} {
     width: 100%;
     padding: 0;
+    gap: 15px;
+    height: auto;
   }
 `;
 

@@ -15,13 +15,14 @@ function Catalog() {
   
   return (
     <Wrapper>
-      <H1>
+      <H1 data-aos="fade-up">
         <span className="color"> {t("home.catalog.title")} </span> -{" "}
         {t("home.catalog.title_span")}
       </H1>
       <Cards>
         <Card
           url={img1}
+          data-aos="zoom-in-up"
           onClick={() =>
             handleNavigate("https://prowellness.uz/categories/begovye_dorozhki")
           }
@@ -35,12 +36,14 @@ function Catalog() {
           onClick={() =>
             handleNavigate("https://prowellness.uz/categories/velotrenazhery")
           }
+          data-aos="zoom-in-up"
         >
           <CardBack src={img2} al="" />
           <Title>{t("home.catalog.img2")}</Title>
           <Span></Span>
         </Card>
         <Card
+          data-aos="zoom-in-up"
           url={img3}
           onClick={() =>
             handleNavigate(
@@ -53,6 +56,7 @@ function Catalog() {
           <Span></Span>
         </Card>
         <Card
+          data-aos="zoom-in-up"
           onClick={() =>
             handleNavigate(
               "https://prowellness.uz/categories/trenazhery_dlja_funkcional_noj_trenirovki"
@@ -65,6 +69,7 @@ function Catalog() {
           <Span></Span>
         </Card>
         <Card
+          data-aos="zoom-in-up"
           onClick={() =>
             handleNavigate(
               "https://prowellness.uz/categories/nagruzhaemye_diskami"
@@ -77,6 +82,7 @@ function Catalog() {
           <Span></Span>
         </Card>
         <Card
+          data-aos="zoom-in-up"
           onClick={() =>
             handleNavigate(
               "https://prowellness.uz/categories/svobodnye_vesa_i_hranenie"

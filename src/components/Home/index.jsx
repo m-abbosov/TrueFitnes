@@ -17,6 +17,7 @@ import HomeForm from "../HomeForm";
 import BestFeatures from "../BestFeatures";
 import img from "../../assets/imgs/aboutTrue.png";
 import { useTranslation } from "react-i18next";
+import Projetcs from "../Projects/index.jsx";
 
 function Home() {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ function Home() {
         <div
           style={{ width: "230px", height: "1.5px", background: "#FFF500" }}
         ></div>
-        <p>{t("home.blue_fon")}</p>
+        <p data-aos="fade-up">{t("home.blue_fon")}</p>
         <div
           style={{ width: "230px", height: "1.5px", background: "#FFF500" }}
         ></div>
@@ -50,6 +51,7 @@ function Home() {
       <Club />
       <AboutTrue img={img} button={true} />
       <HomeForm />
+      <Projetcs />
     </Wrapper>
   );
 }

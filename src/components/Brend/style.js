@@ -257,7 +257,7 @@ export const CardText = styled.p`
   text-transform: uppercase;
   text-align: left;
   color: #ffffff;
-  height: 60px;
+  height: 80px;
   @media ${device.maxWidth} {
     font-size: 15px;
     line-height: normal;

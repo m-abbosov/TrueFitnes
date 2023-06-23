@@ -50,7 +50,7 @@ function Club() {
       .then((res) => res.json())
       .then((html) => {
         toast.update(id, {
-          render: "Добавлено успешно!",
+          render: "«ОТПРАВЛЕНО успешно!»",
           type: "success",
           isLoading: false,
           autoClose: 2000,
@@ -70,15 +70,22 @@ function Club() {
 
   return (
     <Wrapper id="club-3d">
-      <Img src={img} />
-      <Form id="sheetdb-form" onSubmit={handleSubmit}>
-        <H1> {t("home.club.title")} </H1>
-        <Input required type="text" placeholder="Имя" name="data[name]" />
+      <Img src={img} alt="" data-aos="zoom-in-right" />
+      <Form data-aos="fade-left" id="sheetdb-form" onSubmit={handleSubmit}>
+        <H1 data-aos="fade-left"> {t("home.club.title")} </H1>
+        <Input
+          data-aos="fade-left"
+          required
+          type="text"
+          placeholder="Имя"
+          name="data[name]"
+        />
         <Input
           required
           type="email"
           placeholder="Электронная почта"
           name="data[email]"
+          data-aos="fade-left"
         />
         <PhoneInput
           defaultCountry="uz"
@@ -87,11 +94,12 @@ function Club() {
           onChange={(phone) => setPhone(phone)}
           placeholder="+998 (99)-999-99-99"
           name="data[phone]"
+          data-aos="fade-left"
         />
-        <Button onSubmit={handleSubmit} type="submit">
+        <Button onSubmit={handleSubmit} data-aos="fade-left" type="submit">
           {t("home.club.button")}
         </Button>
-        <P> {t("home.club.text")} </P>
+        <P data-aos="fade-left"> {t("home.club.text")} </P>
         <ToastContainer />
       </Form>
     </Wrapper>

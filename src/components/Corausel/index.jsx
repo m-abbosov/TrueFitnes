@@ -70,22 +70,31 @@ function Carousel() {
               >
                 <div className="home-carousel-wrapper-div">
                   <div className="home-carousel-wrapper-div-texts">
-                    <h2 className="home-carousel-wrapper-div-texts-logo">
+                    <h2
+                      data-aos="fade-right"
+                      className="home-carousel-wrapper-div-texts-logo"
+                    >
                       TRUE <br />
                       <span style={{ color: "#01aee7" }}>FITNESS</span>
                     </h2>
-                    <div className="yellowLine"></div>
-                    <div className="home-carousel-wrapper-div-texts-logo-text">
+                    <div data-aos="fade-right" className="yellowLine"></div>
+                    <div
+                      data-aos="fade-right"
+                      className="home-carousel-wrapper-div-texts-logo-text"
+                    >
                       {t("home.carousel.mainText")}
                     </div>
                     <div className="bottom-text-wrapper">
-                      <h2 className="bottomText">{item.title}</h2>
+                      <h2 data-aos="fade-right" className="bottomText">
+                        {item.title}
+                      </h2>
                       <svg
                         width="147"
                         height="18"
                         viewBox="0 0 147 18"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                        data-aos="fade-right"
                       >
                         <path
                           d="M147 9L132 0.339746V17.6603L147 9ZM0 10.5H133.5V7.5H0V10.5Z"
@@ -95,7 +104,12 @@ function Carousel() {
                     </div>
                   </div>
                   <div className="home-carousel-wrapper-div-img">
-                    <img src={item.img} className="w-100" alt="" />
+                    <img
+                      data-aos="fade-left"
+                      src={item.img}
+                      className="w-100"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>

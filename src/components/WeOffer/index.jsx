@@ -27,39 +27,39 @@ function WeOffer() {
           {t("home.we_offer.title")}
         </h1>
         <Cards>
-          <Card>
+          <Card data-aos="flip-up">
             <Naushnik />
             <Title>{t("home.we_offer.icon1_title")}</Title>
             <P>{t("home.we_offer.icon1_text")}</P>
           </Card>
-          <Card>
+          <Card data-aos="flip-up">
             <Youtube />
             <Title>{t("home.we_offer.icon2_title")}</Title>
             <P>{t("home.we_offer.icon2_text")}</P>
           </Card>
-          <Card>
+          <Card data-aos="flip-up">
             <Burchak />
             <Title>{t("home.we_offer.icon3_title")}</Title>
             <P>{t("home.we_offer.icon3_text")}</P>
           </Card>
-          <Card>
+          <Card data-aos="flip-up">
             <Home />
             <Title>{t("home.we_offer.icon4_title")}</Title>
             <P>{t("home.we_offer.icon4_text")}</P>
           </Card>
-          <Card>
-            <Settings/>
+          <Card data-aos="flip-up">
+            <Settings />
             <Title>{t("home.we_offer.icon5_title")}</Title>
             <P>{t("home.we_offer.icon5_text")}</P>
           </Card>
-          <Card>
+          <Card data-aos="flip-up">
             <Car />
             <Title>{t("home.we_offer.icon6_title")}</Title>
             <P>{t("home.we_offer.icon6_text")}</P>
           </Card>
         </Cards>
       </TextCotainer>
-      <Img src={img} alert="weOffer" />
+      <Img data-aos="fade-left" src={img} alert="weOffer" />
     </Wrapper>
   );
 }

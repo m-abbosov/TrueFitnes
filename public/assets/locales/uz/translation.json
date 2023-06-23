@@ -18,6 +18,7 @@
   "home": {
     "bg_video": "TRUE FITNESS - AQSHDAGI  PREMİUM USKUNALAR",
     "blue_fon": "TRUE dunyodagi etakchi premium fitnes uskunalari ishlab chiqaruvchisi",
+    "projectTitle": "Bizning boshqa proyektlarimiz",
     "carousel": {
       "title1": "KARDIO ASBOBLARI",
       "title2": "KUCH TRENERLAR",
@@ -67,7 +68,7 @@
     },
     "aboutTrue": {
       "title": "TRUE KOMPANIYASI HAQIDA",
-      "text": "Kompaniya 1972 yilda tashkil etilganidan beri va butun faoliyati davomida TRUE asosiy tamoyillarga amal qildi: yuqori sifatli mahsulotlar va birinchi darajali xizmat ko'rsatish, bu brendga o'zining etakchi mavqeini saqlab qolish va mijozlar bilan uzoq muddatli va ishonchli munosabatlar o'rnatish imkonini beradi.",
+      "text": "Kompaniya 1981 yilda tashkil etilganidan beri va butun faoliyati davomida TRUE asosiy tamoyillarga amal qildi: yuqori sifatli mahsulotlar va birinchi darajali xizmat ko'rsatish, bu brendga o'zining etakchi mavqeini saqlab qolish va mijozlar bilan uzoq muddatli va ishonchli munosabatlar o'rnatish imkonini beradi.",
       "button": "BATAFSIL MA'LUMOT"
     },
     "home_form": {
@@ -93,7 +94,7 @@
     "about_container": {
       "title1": "Haqiqiy fitnesning muhim bosqichlari",
       "title2": "Rivojlanish tarixi, innovatsiyalar tarixi",
-      "text1": "1972-yilda tashkil etilganidan buyon TRUE ikkita asosiy tamoyilga asos solingan: eng yuqori sifatli mahsulotlarni yaratish va ularni yuqori xizmat bilan qo'llab-quvvatlash. Yillar davomida fitnes industriyasi o'zgardi, yangi bozorlar paydo bo'ldi va mijozlarimizning ehtiyojlari o'zgardi, ammo bu tamoyillar o'zgarishsiz qolmoqda va biz tinmay texnologiyalarimizni yangilab turishda davom etamiz.",
+      "text1": "1981-yilda tashkil etilganidan buyon TRUE ikkita asosiy tamoyilga asoslanadi: eng yuqori sifatli mahsulotlarni yaratish va ularni yuqori xizmat ko'rsatish bilan qo'llab-quvvatlash. Yillar davomida fitnes industriyasi o'zgardi, yangi bozorlar paydo bo'ldi va mijozlarimizning ehtiyojlari o'zgardi, ammo bu tamoyillar o'zgarishsiz qolmoqda va biz tinmay texnologiyalarimizni yangilab turishda davom etamiz.",
       "text2": "Bizning qadriyatlarimizga sodiq qolgan holda, TRUE har doim mashinalarimizni eng yangi texnologiyalar va xavfsizlik xususiyatlari bilan jihozlashga intiladi. Eng boshidanoq biz mijozlarimizga eng yaxshi ta'lim tajribasini taqdim etib, ularga xavfsiz bo'lishlariga ishonch hosil qildik. Mana 45+ yillik tariximiz davomida sanoatda erishgan ulkan yutuqlarimiz.",
       "trueSports_title": "TRUE Sports o'zining birinchi yugurish yo'lakchasini ishlab chiqadi",
       "trueSports_text": "1972 yilda Frank Trulaske tomonidan asos solingan True Sports o'zining birinchi yugurish yo'lakchasini ishlab chiqadi va dunyodagi treadmill dizayni bo'yicha kashshoflardan biridir. Amaldagi texnologiyalar fitnes sanoatining rivojlanishiga ta'sir ko'rsatdi."
@@ -161,9 +162,34 @@
       "input_phone_title": "Telefon raqami",
       "input_city_title": "Shahar",
       "radio_open_title": "Siz ochmoqchimisiz:",
+      "open_text-1": "Fitnes Club",
+      "open_text-2": "Fitnes Studiya",
+      "open_text-3": "Korporativ sport zali",
+      "open_text-4": "Mehmonxonadagi sport zali, SANATORIY",
+      "open_text-5": "Uy sport zali",
+
       "radio_date_title": "Loyihaning rejalashtirilgan boshlanish sanasi:",
+      "date_text-1": "ZUDLIK BILAN",
+      "date_text-2": "1 OYgacha",
+      "date_text-3": "2 OYgacha",
+      "date_text-4": "6 OYgacha",
+      "date_text-5": "12 OYgacha",
+      "date_text-6": "12 OYDAN KO'P",
+
       "radio_size_title": "Sport zalining umumiy maydoni:",
+      "size_text-1": "100 М2 gacha",
+      "size_text-2": "100 - 200 М2",
+      "size_text-3": "200 - 400 М2",
+      "size_text-4": "400 - 700 М2",
+      "size_text-5": "700 - 1000 М2",
+      "size_text-6": "1000 - 1500 М2",
+      "size_text-7": "1500 М2 dan katta",
+
       "select_title": "Sizni qaysi xizmatlar qiziqtiradi:",
+      "select_text-1": "MASLAHAT",
+      "select_text-2": "Uskunalarni tanlash",
+      "select_text-3": "REJA BO'YICHA TRENAJORNI TASHLASHTIRISH",
+
       "comentary": "Izoh qoldirish",
       "button": "Yuborish"
     }
