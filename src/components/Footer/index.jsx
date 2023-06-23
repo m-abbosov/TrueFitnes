@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Button,
   Div,
@@ -16,9 +17,9 @@ import {
 import { navbar } from "../../utils/navbar.js";
 import cookie from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 const uzb = [
-  '',
+  "",
   "Brend Haqida",
   "MAHSULOTLAR",
   "Afzalliklari",
@@ -28,61 +29,53 @@ const uzb = [
 
 function Footer() {
   const navigate = useNavigate();
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   const currentLenguageCode = cookie.get("i18next") || "uz";
-  const catalog = [
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/begovye_dorozhki",
-      title: "Кардио тренажеры",
-      uz: "Kardiyo mashinalari",
-    },
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/nagruzhaemye_diskami",
-      title: "Composite Strength",
-      uz: "Composite Strength",
-    },
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/velotrenazhery",
-      title: "True Stretch",
-      uz: "True Stretch",
-    },
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/jellipticheskie_trenazhery",
-      title: "Сайклинг",
-      uz: "Saikling",
-    },
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/trenazhery_dlja_funkcional_noj_trenirovki",
-      title: "Групповые тренировки",
-      uz: "Guruh mashg'ulotlari",
-    },
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/trenazhery_so_stekami",
-      title: "Силовые тренажеры",
-      uz: "Og'irlik mashinalari",
-    },
-    {
-      id: Math.random(),
-      link: "https://prowellness.uz/categories/svobodnye_vesa_i_hranenie",
-      title: "Консоли",
-      uz: "Konsollar",
-    },
-  ];
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData([
+      {
+        id: Math.random(),
+        title: t("home.catalog.img1"),
+        link: "https://prowellness.uz/categories/begovye_dorozhki",
+      },
+      {
+        id: Math.random(),
+        title: t("home.catalog.img2"),
+        link: "https://prowellness.uz/categories/velotrenazhery",
+      },
+      {
+        id: Math.random(),
+        title: t("home.catalog.img3"),
+        link: "https://prowellness.uz/categories/jellipticheskie_trenazhery",
+      },
+      {
+        id: Math.random(),
+        title: t("home.catalog.img4"),
+        link: "https://prowellness.uz/categories/trenazhery_dlja_funkcional_noj_trenirovki",
+      },
+      {
+        id: Math.random(),
+        title: t("home.catalog.img5"),
+        link: "https://prowellness.uz/categories/nagruzhaemye_diskami",
+      },
+
+      {
+        id: Math.random(),
+        title: t("home.catalog.img6"),
+        link: "https://prowellness.uz/categories/svobodnye_vesa_i_hranenie",
+      },
+    ]);
+  }, [t]);
 
   return (
     <Wrapper>
       <FooterDiv>
         <b className="titleText">{t("footer.title1")}</b>
         <Texts>
-          {catalog.map((item) => (
+          {data.map((item) => (
             <P onClick={() => window.open(item.link, "__blank")} key={item.id}>
-              {currentLenguageCode === "uz" ? item.uz : item.title}
+              {item.title}
             </P>
           ))}
           <h6>© TRUE FITNESS</h6>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Card, Cards, H1, Wrapper, Title, Span, CardBack } from "./style";
 import img1 from "../../assets/imgs/catalog1.png";
 import img2 from "../../assets/imgs/ctalog2.png";
@@ -8,11 +9,54 @@ import img6 from "../../assets/imgs/catalog6.png";
 import { useTranslation } from "react-i18next";
 
 function Catalog() {
+  const [data, setData] = useState([]);
   const { t } = useTranslation();
   const handleNavigate = (link) => {
     window.open(link, "_blank").focus();
   };
-  
+
+  useEffect(() => {
+    setData([
+      {
+        id: Math.random(),
+        img: img1,
+        title: t("home.catalog.img1"),
+        link: "https://prowellness.uz/categories/begovye_dorozhki",
+      },
+      {
+        id: Math.random(),
+        img: img2,
+        title: t("home.catalog.img2"),
+        link: "https://prowellness.uz/categories/velotrenazhery",
+      },
+      {
+        id: Math.random(),
+        img: img3,
+        title: t("home.catalog.img3"),
+        link: "https://prowellness.uz/categories/jellipticheskie_trenazhery",
+      },
+      {
+        id: Math.random(),
+        img: img4,
+        title: t("home.catalog.img4"),
+        link: "https://prowellness.uz/categories/trenazhery_dlja_funkcional_noj_trenirovki",
+      },
+      {
+        id: Math.random(),
+        img: img5,
+        title: t("home.catalog.img5"),
+        link: "https://prowellness.uz/categories/nagruzhaemye_diskami",
+      },
+
+      {
+        id: Math.random(),
+        img: img6,
+        title: t("home.catalog.img6"),
+        link: "https://prowellness.uz/categories/svobodnye_vesa_i_hranenie",
+      },
+    ]);
+  }, [t]);
+
   return (
     <Wrapper>
       <H1 data-aos="fade-up">
@@ -20,80 +64,17 @@ function Catalog() {
         {t("home.catalog.title_span")}
       </H1>
       <Cards>
-        <Card
-          url={img1}
-          data-aos="zoom-in-up"
-          onClick={() =>
-            handleNavigate("https://prowellness.uz/categories/begovye_dorozhki")
-          }
-        >
-          <CardBack src={img1} al="" />
-          <Title>{t("home.catalog.img1")}</Title>
-          <Span></Span>
-        </Card>
-        <Card
-          url={img2}
-          onClick={() =>
-            handleNavigate("https://prowellness.uz/categories/velotrenazhery")
-          }
-          data-aos="zoom-in-up"
-        >
-          <CardBack src={img2} al="" />
-          <Title>{t("home.catalog.img2")}</Title>
-          <Span></Span>
-        </Card>
-        <Card
-          data-aos="zoom-in-up"
-          url={img3}
-          onClick={() =>
-            handleNavigate(
-              "https://prowellness.uz/categories/jellipticheskie_trenazhery"
-            )
-          }
-        >
-          <CardBack src={img3} al="" />
-          <Title>{t("home.catalog.img3")}</Title>
-          <Span></Span>
-        </Card>
-        <Card
-          data-aos="zoom-in-up"
-          onClick={() =>
-            handleNavigate(
-              "https://prowellness.uz/categories/trenazhery_dlja_funkcional_noj_trenirovki"
-            )
-          }
-          url={img4}
-        >
-          <CardBack src={img4} al="" />
-          <Title>{t("home.catalog.img4")}</Title>
-          <Span></Span>
-        </Card>
-        <Card
-          data-aos="zoom-in-up"
-          onClick={() =>
-            handleNavigate(
-              "https://prowellness.uz/categories/nagruzhaemye_diskami"
-            )
-          }
-          url={img5}
-        >
-          <CardBack src={img5} al="" />
-          <Title>{t("home.catalog.img5")}</Title>
-          <Span></Span>
-        </Card>
-        <Card
-          data-aos="zoom-in-up"
-          onClick={() =>
-            handleNavigate(
-              "https://prowellness.uz/categories/svobodnye_vesa_i_hranenie"
-            )
-          }
-          url={img6}
-        >
-          <CardBack src={img6} al="" />
-          <Title>{t("home.catalog.img6")}</Title>
-          <Span></Span>
-        </Card>
+        {data.map((item) => (
+          <Card
+            key={item.id}
+            data-aos="zoom-in-up"
+            onClick={() => handleNavigate(item.link)}
+          >
+            <CardBack src={item.img} al="" />
+            <Title>{item.title}</Title>
+            <Span></Span>
+          </Card>
+        ))}
       </Cards>
     </Wrapper>
   );

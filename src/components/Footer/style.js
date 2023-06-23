@@ -30,7 +30,6 @@ export const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 28px;
-  width: 23%;
   max-height: fit-content;
   @media ${device.maxWidth} {
     width: 100%;

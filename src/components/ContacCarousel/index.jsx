@@ -7,6 +7,7 @@ import Car4 from "../../assets/imgs/carousel/Car4.JPG";
 import Car5 from "../../assets/imgs/carousel/Car5.JPG";
 import Car6 from "../../assets/imgs/carousel/Car6.JPG";
 import Car7 from "../../assets/imgs/carousel/Car7.JPG";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function MyCarousel() {
   const data = [Car1, Car2, Car3, Car4, Car5, Car6, Car7];
@@ -17,7 +18,7 @@ function MyCarousel() {
         id="carouselExampleInterval"
         className="carousel slide"
         data-bs-ride="carousel"
-        style={{ width: "1030px" }}
+        style={{ width: "90%" }}
       >
         <div className="carousel-indicators">
           {data.map((_, i) => {
@@ -41,9 +42,14 @@ function MyCarousel() {
               <div
                 className={`carousel-item ${i === 0 ? "active" : ""}`}
                 key={Math.random()}
-                data-bs-interval="2000"
+                data-bs-interval="10000"
               >
-                <img src={item} className="d-block w-100 " alt="..." />
+                <LazyLoadImage
+                  src={item}
+                  effect="blur"
+                  className="d-block w-100 "
+                  alt="..."
+                />
               </div>
             );
           })}
