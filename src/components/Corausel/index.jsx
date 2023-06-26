@@ -3,8 +3,8 @@ import { Wrapper } from "./style";
 import "./style.css";
 
 import CarsImg1 from "../../assets/imgs/carousel/Img1.PNG";
+import CarsImg2 from "../../assets/imgs/carousel/Img2.PNG";
 import CarsImg3 from "../../assets/imgs/carousel/Img3.PNG";
-import CarsImg4 from "../../assets/imgs/carousel/Img4.PNG";
 import CarsImg5 from "../../assets/imgs/carousel/Img5.PNG";
 import { useTranslation } from "react-i18next";
 
@@ -21,7 +21,7 @@ function Carousel() {
       },
       {
         id: Math.random(),
-        img: CarsImg5,
+        img: CarsImg2,
         title: t("home.carousel.title2"),
       },
       {
@@ -31,7 +31,7 @@ function Carousel() {
       },
       {
         id: Math.random(),
-        img: CarsImg4,
+        img: CarsImg5,
         title: t("home.carousel.title4"),
       },
     ]);
