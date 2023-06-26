@@ -83,7 +83,7 @@ export const Links = styled.div`
   }
   @media ${device.dectop} {
     flex-direction: row;
-    gap: 120px;
+    justify-content: space-between;
     display: ${({ mobile }) => (mobile ? "none" : "flex")};
   }
 `;
