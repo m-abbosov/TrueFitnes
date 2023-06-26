@@ -3,7 +3,7 @@ import { device } from "../../utils/responsive";
 
 export const Wrapper = styled.div`
   width: 100vw;
-  margin-top: 30px;
+  
   @media ${device.maxWidth} {
     margin: 0;
     padding: 0;

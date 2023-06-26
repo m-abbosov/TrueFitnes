@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from '../../utils/responsive';
+import { device } from "../../utils/responsive";
 
 export const Wrapper = styled.div`
   background: #eeeeee;
@@ -62,17 +62,19 @@ export const Card = styled.div`
   justify-content: flex-start;
   gap: 20px;
 
-  svg {
+  .icon {
     width: 80px;
     height: 80px;
   }
+
+  
   @media ${device.maxWidth} {
     width: 100%;
     height: 142px;
     gap: 10px;
     justify-items: center;
 
-    svg {
+    .icon {
       width: 40px !important;
       height: 40px !important;
     }

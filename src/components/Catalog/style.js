@@ -55,6 +55,10 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 1370px) {
+    width: 49%;
+  }
+
   @media ${device.maxWidth} {
     width: 100%;
     height: 223.213px;
